@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "phone": "123-456-7890",
+      "password": "hashed_password_1"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane@example.com",
+      "phone": "987-654-3210",
+      "password": "hashed_password_2"
+    }
+  ],
+  "register": [
+    {
+      "firstName": "Karolaxa",
+      "lastName": "Nowakowski",
+      "email": "karol.nowak@wp.plo",
+      "phoneNumber": "43543534333",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 1
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Pawlak",
+      "email": "jan.pawlak@wp.pl",
+      "phoneNumber": "74934892",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 2
+    },
+    {
+      "firstName": "Ola",
+      "lastName": "Kocyk",
+      "email": "ola.koc@wp.pl",
+      "phoneNumber": "832843282",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 3
+    },
+    {
+      "firstName": "Janek",
+      "lastName": "Nowak",
+      "email": "jan.nowak@wp.pl",
+      "phoneNumber": "847234732",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 4
+    }
+  ]
+}

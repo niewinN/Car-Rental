@@ -1,0 +1,280 @@
+{
+	"nav": {
+		"subTitle": "Discover the freedom on four wheels - rent dreams",
+		"login": "Log in",
+		"reservation": "Reservation",
+		"flota": "Fleet",
+		"contact": "Contact"
+	},
+	"carSlider": {
+		"slogan1": "Complete reservation criteria and travel without limits!",
+		"slogan2": "Rent the car of your dreams!",
+		"slogan3": "Your car for every occasion!",
+		"slogan4": "My rental in Poland!"
+	},
+	"reservation": "Reservations: +48 435 854 354",
+	"button": "Search for a car",
+	"selectCity": {
+		"none": "Select a city",
+		"one": "Warsaw, Okopowa 1",
+		"two": "Warsaw, Plac Defilad 1"
+	},
+	"refund": {
+		"ref": "Return the car in a different location",
+		"age": "Driving license < 1 year"
+	},
+	"Date": {
+		"pick": "Pick-up date",
+		"refund": "Return date"
+	},
+	"filterParameters": {
+		"type": "VEHICLE TYPE",
+		"personal": "Personal",
+		"bus": "Minibuses/Van",
+		"delivery": "Delivery",
+		"taxi": "Taxi",
+		"gear": "TRANSMISSION",
+		"manual": "Manual",
+		"auto": "Automatic",
+		"rent": "Rental",
+		"short": "ShortTerm",
+		"long": "LongTerm",
+		"steering wheel": "Steering Wheel"
+	},
+	"footer": {
+		"name": "CAR-RENTAL.PL",
+		"address": "01-123 Warsaw",
+		"street": "Okopowa 1",
+		"contact": "Contact",
+		"links": {
+			"terms": "General terms of vehicle rental",
+			"info": "Information clauses",
+			"privacy": "Privacy Policy"
+		},
+		"complaints": "Complaints",
+		"reservation": "Reservations:",
+		"contactUs": "Contact us!",
+		"phoneNumber": "+48 324 424 424",
+		"email": "car.rental@kontakt.pl"
+	},
+	"authors": "By:",
+	"price": {
+		"sum": "TOTAL",
+		"summary": "Fill in all the details",
+		"book": "Book Now"
+	},
+	"premission": {
+		"one": "I declare that before concluding the agreement, I have read the Car Rental Ltd. Regulations for car rental, with its registered office in Warsaw (01-123), at 1 Okopowa Street. I understand and accept its content.",
+		"two": "I consent to the processing of my personal data. More information on the website www.car-rental.pl in the privacy policy section."
+	},
+	"reservationForm": {
+		"fetchCompanyData": "Download comapny details",
+		"company": "Company",
+		"title": {
+			"id": "Personal Information",
+			"address": "Address Information"
+		},
+		"name": "Full Name:",
+		"phone": "Phone Number:",
+		"id-card-licence": "Driver's License Number:",
+		"address": "Street and House Number:",
+		"zip-code": "Zip Code:",
+		"City": "City:",
+		"Country": "Country:",
+		"nip": "NIP:",
+		"regon": "REGON:"
+	},
+	"reservationSummary": {
+		"summary": "Summary",
+		"pick-up": "Pick-up Date and Time",
+		"refund": "Return Date and Time",
+		"pick-up-place": "Pick-up Location",
+		"refund-place": "Return Location",
+		"street": {
+			"one": "Warsaw, Okopowa Street 62"
+		}
+	},
+	"yourCars": "Your cars",
+	"login": {
+		"login": "Log in",
+		"registration": "Register",
+		"for": "using the form",
+		"panel": {
+			"name": "First Name",
+			"lastName": "Last Name",
+			"phone": "Phone Number",
+			"password": "Password",
+			"confirm": "Confirm Password"
+		},
+		"oneClick": "Or with one click"
+	},
+	"FAQ": {
+		"questions": "Questions",
+		"terms": "Terms",
+		"privacy": "Privacy Policy",
+		"search": "Search"
+	},
+	"buttons": {
+		"cancel": "Cancel",
+		"confirm": "Confirm"
+	},
+	"errors": {
+		"nameSurname": "Please provide a valid first name and last name.",
+		"phoneNumber": "Please provide a valid phone number (9 digits).",
+		"email": "Please provide a valid email address.",
+		"driveNr": "Driver's license number is required.",
+		"streetNr": "Street and house number are required.",
+		"zipCode": "Please provide a valid postal code (format XX-XXX).",
+		"city": "City is required.",
+		"country": "Country is required.",
+		"carAgreement": "Accepting the terms and conditions is required.",
+		"personalDataAgreement": "Consent for data processing is required.",
+		"valid": "The form has been successfully submitted."
+	},
+	"privacyOptions": "Your Privacy Options",
+	"cookieDescription": "This website uses cookies, tags, and similar technologies to offer users the best service level. In addition to the categories listed below, our site also uses essential cookies that ensure its functioning. More details can be found in our cookie policy. Below you can manage your preferences. By selecting CONFIRM, you agree to our use of cookies according to these preferences. To remember these preferences, we will use an appropriate cookie.",
+	"trafficAnalysis": {
+		"title": "Traffic Analysis",
+		"description": "These cookies are used to collect data on how users use our website."
+	},
+	"adsAndProfiling": {
+		"title": "Advertising and Profiling",
+		"description": "These files allow us to tailor the advertisements you see on other sites."
+	},
+	"optimization": {
+		"title": "Optimization",
+		"description": "These cookies allow us to optimize your visit to the CAR-RENTAL.PL site and improve your experience."
+	},
+	"confirm": "CONFIRM",
+	"website": "CAR-RENTAL.PL",
+	"address": {
+		"city": "01-123 Warsaw",
+		"street": "Okopowa 1"
+	},
+	"taxInfo": {
+		"nip": "TAX ID: 543543535",
+		"regon": "REGON: 365654644",
+		"bankAccount": "BANK ACCOUNT:",
+		"bankAccountNr": "3243243243243240242424"
+	},
+	"findUs": "Find us on the map and see where you can pick up your car!",
+	"labels": {
+		"name": "Full name",
+		"phoneNumber": "Phone number",
+		"email": "E-mail",
+		"subject": "Subject",
+		"message": "Message",
+		"submitButton": "Send"
+	},
+	"formTitle": "Contact form",
+	"validation": {
+		"requiredName": "Full name is required",
+		"shortName": "Full name is too short",
+		"longName": "Full name is too long",
+		"invalidName": "Please enter a valid full name",
+		"requiredPhone": "Phone number is required",
+		"invalidPhone": "Please enter a valid phone number",
+		"requiredEmail": "E-mail is required",
+		"shortEmail": "E-mail address is too short",
+		"longEmail": "E-mail address is too long",
+		"invalidEmail": "Please enter a valid e-mail address",
+		"requiredSubject": "Subject is required",
+		"shortSubject": "Subject is too short",
+		"longSubject": "Subject is too long",
+		"requiredMessage": "Message is required",
+		"shortMessage": "Message is too short",
+		"longMessage": "Message is too long"
+	},
+	"validationSummary": {
+		"summaryNameSurname": {
+			"summaryRequired": "First and last name are required",
+			"summaryMatches": "Please enter a valid first and last name"
+		},
+		"summaryPhoneNumber": {
+			"summaryRequired": "Phone number is required",
+			"summaryMatches": "Please enter a valid phone number"
+		},
+		"summaryEmail": {
+			"summaryRequired": "E-mail address is required",
+			"summaryMatches": "Please enter a valid e-mail address"
+		},
+		"summaryDriveNr": "Driver's license number is required",
+		"summaryStreetNr": "Street and house number are required",
+		"summaryZipCode": {
+			"summaryRequired": "Postal code is required",
+			"summaryMatches": "Please enter a valid postal code (format XX-XXX)"
+		},
+		"summaryCity": "City is required",
+		"summaryCountry": "Country is required",
+		"summaryCarAgreement": "Acceptance of the regulations is required!",
+		"summaryPersonalDataAgreement": "Consent to data processing is required!",
+		"summaryNip": "NIP is required",
+		"summaryRegon": "REGON is required"
+	},
+	"buttons": {
+		"cancel": "Cancel",
+		"confirm": "Confirm"
+	},
+	"reservationCriteria": "Reservation Criteria",
+	"type": "Vehicle Type",
+	"carTypes": {
+		"sedan": "Sedan",
+		"van": "VAN",
+		"delivery": "Delivery",
+		"taxi": "Taxi"
+	},
+	"rent": "Rental",
+	"rentDuration": {
+		"shortTerm": "Short-term",
+		"longTerm": "Long-term"
+	},
+	"gearbox": "Gearbox",
+	"gearboxTypes": {
+		"manual": "Manual",
+		"automatic": "Automatic"
+	},
+	"fuel": "Fuel Type",
+	"fuelTypes": {
+		"gasoline": "Gasoline",
+		"diesel": "Diesel",
+		"lpg": "LPG",
+		"gasolineLpg": "Gasoline + LPG"
+	},
+	"services": "Additional Services",
+	"serviceOptions": {
+		"towHitch": "Tow Hitch",
+		"childSeat": "Child Seat (9 - 36 kg)",
+		"babySeat": "Baby Carrier Seat (0 - 9 kg)",
+		"gps": "GPS Navigation",
+		"extraDriver": "Extra Driver",
+		"carCharger": "Car Charger",
+		"phoneHolder": "Phone Holder",
+		"differentLocation": "Pick-up from Different Location"
+	},
+	"noCarsMatchingCriteria": "No cars match your criteria.",
+	"reserve": "Reserve",
+	"reserved": "Added to cart",
+	"carFeatures": {
+		"Manual": "Manual",
+		"5 osobowy": "5-seater",
+		"Diesel": "Diesel",
+		"Bagażnik - 280L": "Trunk - 280L",
+		"5 drzwiowy": "5-door",
+		"Automat": "Automatic",
+		"Benzyna": "Gasoline",
+		"Bagażnik - 380L": "Trunk - 380L",
+		"LPG": "LPG",
+		"Bagażnik - 480L": "Trunk - 480L"
+	},
+	"yourBasket": "Your basket ({{count}})",
+	"noCarsAdded": "You haven't added any car yet",
+	"reservationsPhone": "Reservations: +48 565 323 231",
+	"addMoreCars": "Add more cars",
+	"thankYou": "Thank you for using our services and making a reservation!",
+	"contactSoon": "We will contact you soon",
+	"happyJourney": "Wishing you a pleasant journey 😊",
+	"toastReserveError": "Please set your pick-up and drop-off date and city before proceeding",
+	"toastFormSuccess": "The form has been sent successfully!",
+	"errorNip": "No information found about the company. Complete the data manually.",
+	"errorFleet": "At this moment we do not have this car in our fleet"
+}

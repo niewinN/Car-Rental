@@ -1,0 +1,12 @@
+[
+    {
+      "email": "jan.kowalski@wp.pl",
+      "nameSurname": "Jan Kowalski",
+      "phoneNumber": "+48123456789",
+      "driveNr": "12345678",
+      "streetNr": "ul. Kwiatowa 5",
+      "zipCode": "00-001",
+      "city": "Warszawa",
+      "country": "Polska"
+    }
+  ]

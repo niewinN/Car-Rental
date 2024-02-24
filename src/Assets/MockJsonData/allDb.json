@@ -1,0 +1,614 @@
+// {
+//   "users": [
+//     {
+//       "id": 1,
+//       "firstName": "John",
+//       "lastName": "Doe",
+//       "email": "john@example.com",
+//       "phone": "123-456-7890",
+//       "password": "hashed_password_1"
+//     },
+//     {
+//       "id": 2,
+//       "firstName": "Jane",
+//       "lastName": "Smith",
+//       "email": "jane@example.com",
+//       "phone": "987-654-3210",
+//       "password": "hashed_password_2"
+//     }
+//   ],
+//   "register": [
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.pl",
+//       "phone": "669774897",
+//       "password": "12345",
+//       "id": 1
+//     },
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.plaa",
+//       "phone": "669774897",
+//       "password": "2",
+//       "id": 2
+//     },
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.pla",
+//       "phone": "669774897",
+//       "password": "12Qw!",
+//       "id": 3
+//     },
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.aaa",
+//       "phone": "669774897",
+//       "password": "ATjgl#669",
+//       "id": 4
+//     },
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.plass",
+//       "phone": "669774897",
+//       "password": "555At!",
+//       "id": 5
+//     },
+//     {
+//       "firstName": "Adam",
+//       "lastName": "Trojecki",
+//       "email": "user3@netfint.plaaa",
+//       "phone": "669774897",
+//       "password": "12345At!",
+//       "id": 6
+//     },
+//     {
+//       "firstName": "Piotr",
+//       "lastName": "Nowak",
+//       "email": "piotrek.niew@vp.pl",
+//       "id": 7
+//     },
+//     {
+//       "firstName": "fsdfdsf",
+//       "lastName": "sdffdsfds",
+//       "email": "jaan.kowalski@wp.pl",
+//       "phoneNumber": "432432432423",
+//       "password": "EloElo12@",
+//       "confirmPassword": "EloElo12@",
+//       "update": false,
+//       "id": 8
+//     },
+//     {
+//       "firstName": "gfdgdf",
+//       "lastName": "dgfdg",
+//       "email": "jjan.kowalski@wp.pl",
+//       "phoneNumber": "5435435435",
+//       "password": "EloElo12@",
+//       "confirmPassword": "EloElo12@",
+//       "update": false,
+//       "id": 9
+//     },
+//     {
+//       "firstName": "fsdfd",
+//       "lastName": "sdfdfs",
+//       "email": "piotrek.nieww@vp.pl",
+//       "phoneNumber": "3432432423",
+//       "password": "EloElo12@",
+//       "confirmPassword": "EloElo12@",
+//       "update": false,
+//       "id": 10
+//     },
+//     {
+//       "firstName": "sdfds",
+//       "lastName": "sdfdsf",
+//       "email": "piottr.kox@wp.pl",
+//       "phoneNumber": "32434324234",
+//       "password": "EloElo12@",
+//       "confirmPassword": "EloElo12@",
+//       "update": false,
+//       "id": 11
+//     }
+//   ],
+//   "carsClasses": [
+//     {
+//       "name": "A",
+//       "terms": [
+//         {
+//           "term": "1-8",
+//           "unit": "dni",
+//           "rate": "120",
+//           "limit": "1400"
+//         },
+//         {
+//           "term": "9-10",
+//           "unit": "dni",
+//           "rate": "110",
+//           "limit": "-"
+//         }
+//       ],
+//       "id": 13
+//     },
+//     {
+//       "name": "B",
+//       "terms": [
+//         {
+//           "term": "1-2",
+//           "unit": "dni",
+//           "rate": "130",
+//           "limit": ""
+//         },
+//         {
+//           "term": "3-4",
+//           "unit": "dni",
+//           "rate": "120",
+//           "limit": "4444"
+//         }
+//       ],
+//       "id": 14
+//     },
+//     {
+//       "name": "C",
+//       "terms": [
+//         {
+//           "term": "13",
+//           "unit": "dni",
+//           "rate": "12",
+//           "limit": ""
+//         },
+//         {
+//           "term": "22",
+//           "unit": "dni",
+//           "rate": "22",
+//           "limit": ""
+//         }
+//       ],
+//       "id": 15
+//     },
+//     {
+//       "name": "D",
+//       "terms": [
+//         {
+//           "term": "1-5",
+//           "unit": "dni",
+//           "rate": "120",
+//           "limit": ""
+//         },
+//         {
+//           "term": "6-8",
+//           "unit": "dni",
+//           "rate": "110",
+//           "limit": "brak"
+//         }
+//       ],
+//       "id": 16
+//     },
+//     {
+//       "name": "E",
+//       "terms": [
+//         {
+//           "term": "1-3",
+//           "unit": "dni",
+//           "rate": "130",
+//           "limit": ""
+//         }
+//       ],
+//       "id": 17
+//     }
+//   ],
+//   "carsTypes": [
+//     {
+//       "name": "Osobowe",
+//       "image": "597",
+//       "id": 1
+//     },
+//     {
+//       "name": "Van",
+//       "image": "222",
+//       "id": 2
+//     },
+//     {
+//       "name": "Dostawcze",
+//       "image": "333",
+//       "id": 3
+//     },
+//     {
+//       "name": "Taxi",
+//       "image": "444",
+//       "id": 4
+//     }
+//   ],
+//   "yesno": [
+//     {
+//       "yesno": "Tak",
+//       "id": 1
+//     },
+//     {
+//       "yesno": "Nie",
+//       "id": 2
+//     }
+//   ],
+//   "cars": [
+//     {
+//       "model": "Toyotaaa",
+//       "licenceNumber": "BI 23564",
+//       "vinNumber": "983838",
+//       "class": "C",
+//       "type": "Van",
+//       "image": "777",
+//       "Paliwo": "Benzyna + LPG",
+//       "GPS": "Tak",
+//       "Isofix": "Tak",
+//       "Hak": "Nie",
+//       "Dodatkowy kierowca": "Nie",
+//       "Fotelik": "Nie",
+//       "id": 27
+//     },
+//     {
+//       "model": "blabla car23",
+//       "licenceNumber": "PLLLLL",
+//       "vinNumber": "2137",
+//       "class": "A",
+//       "type": "Van",
+//       "image": "320",
+//       "Skrzynia biegów": "Manualna",
+//       "Ilu drzwiowy": "3",
+//       "Paliwo": "Benzyna + LPG",
+//       "GPS": "Nie",
+//       "Isofix": "Nie",
+//       "Hak": "Nie",
+//       "Uchwyt na telefon": "Tak",
+//       "Dodatkowy kierowca": "Tak",
+//       "Fotelik": "Tak",
+//       "id": 28
+//     },
+//     {
+//       "model": "Lamboo",
+//       "licenceNumber": "G1 RSW45",
+//       "vinNumber": "47474832",
+//       "class": "C",
+//       "type": "Osobowe",
+//       "image": "317",
+//       "Skrzynia biegów": "Automatyczna",
+//       "Paliwo": "Benzyna + LPG",
+//       "GPS": "Tak",
+//       "Isofix": "Tak",
+//       "Hak": "Tak",
+//       "Uchwyt na telefon": "Tak",
+//       "Dodatkowy kierowca": "Tak",
+//       "Fotelik": "Tak",
+//       "id": 29
+//     }
+//   ],
+//   "Q&A": [
+//     {
+//       "question": "Jakie dokumenty są potrzebne przy wynajmie i odbiorze auta?",
+//       "answer": "Żółte papiery",
+//       "id": 1
+//     },
+//     {
+//       "question": "Czy depozyt/kaucja jest obowiązkowy?",
+//       "answer": "Jeden rabin powie tak, drugi rabin powie nie.",
+//       "id": 3
+//     },
+//     {
+//       "question": "Czy samochód można sterować padem?",
+//       "answer": "Tak, pod warunkiem że grasz w Need For Speed",
+//       "id": 4
+//     },
+//     {
+//       "question": "Czy samochód może prowadzić inna osoba niż ta, która została wskazana w umowie najmu?",
+//       "answer": "Może, jak najbardziej. Jeszcze jak! No chyba, że nie ma prawka, to wtedy już nie",
+//       "id": 5
+//     },
+//     {
+//       "question": "Gdzie mogę odebrać i zwrócić wynajęty samochód?",
+//       "answer": "Za siedmioma górami, za siedmioma lasami...",
+//       "id": 6
+//     },
+//     {
+//       "question": "Czy samochodem z wypożyczalni mogę wyjechać za granicę?",
+//       "answer": "Za granicę swojego województwa co najwyżej.",
+//       "id": 7
+//     }
+//   ],
+//   "localisations": [
+//     {
+//       "adres": "Warszawa ul. Okopowa 120",
+//       "id": 1
+//     },
+//     {
+//       "adres": "Warszawa ul. Okopowa 121",
+//       "id": 2
+//     },
+//     {
+//       "adres": "Warszawa ul. Okopowa 122",
+//       "id": 3
+//     }
+//   ],
+//   "services": [
+//     {
+//       "name": "GPS",
+//       "image": "41",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": true,
+//       "id": 1
+//     },
+//     {
+//       "name": "Isofix",
+//       "image": "11",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": true,
+//       "id": 2
+//     },
+//     {
+//       "name": "Hak",
+//       "image": "22",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": true,
+//       "id": 3
+//     },
+//     {
+//       "name": "Uchwyt na telefon",
+//       "image": "33",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": false,
+//       "id": 4
+//     },
+//     {
+//       "name": "Dodatkowy kierowca",
+//       "image": "78",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": true,
+//       "id": 5
+//     },
+//     {
+//       "name": "Fotelik",
+//       "image": "71",
+//       "list": [
+//         {
+//           "option": "Tak"
+//         },
+//         {
+//           "option": "Nie"
+//         }
+//       ],
+//       "show": true,
+//       "id": 6
+//     }
+//   ],
+//   "carInfromation": [
+//     {
+//       "name": "Skrzynia biegów",
+//       "image": "0",
+//       "list": [
+//         {
+//           "option": "Automatyczna"
+//         },
+//         {
+//           "option": "Manualna"
+//         }
+//       ],
+//       "show": false,
+//       "id": 1
+//     },
+//     {
+//       "name": "Ilu drzwiowy",
+//       "image": "11",
+//       "list": [
+//         {
+//           "option": "3"
+//         },
+//         {
+//           "option": "5"
+//         }
+//       ],
+//       "show": false,
+//       "id": 2
+//     },
+//     {
+//       "name": "Paliwo",
+//       "show": true,
+//       "list": [
+//         {
+//           "option": "Benzyna"
+//         },
+//         {
+//           "option": "Benzyna + LPG"
+//         },
+//         {
+//           "option": "Diesel"
+//         },
+//         {
+//           "option": "LPG"
+//         }
+//       ],
+//       "image": "22",
+//       "id": 3
+//     }
+//   ],
+//   "reservations": [
+//     {
+//       "GPS": "Nie",
+//       "Isofix": "Nie",
+//       "Hak": "Nie",
+//       "Dodatkowy kierowca": "Tak",
+//       "Fotelik": "Tak",
+//       "Model auta": "blabla car23",
+//       "Status": "Odrzucono",
+//       "Imię": "Marek",
+//       "Nazwisko": "Mostowiak",
+//       "Telefon": "667733662",
+//       "Email": "marecki@o2.pl",
+//       "Nr dowodu osobistego": "CS2 137",
+//       "Pesel": "92873728452",
+//       "NIP": "892829381",
+//       "Regon": "382520680",
+//       "Ulica i nr domu": "Waszyngtona 4",
+//       "Kod pocztowy": "02-420",
+//       "Miasto": "Warszawa",
+//       "Kraj": "Polska",
+//       "Data odbioru": "29-09-2023",
+//       "Data zwrotu": "06-10-2023",
+//       "Miejsce odbioru": "Szwankowskiego 2",
+//       "Miejsce zwrotu": "Szwankowskiego 2",
+//       "Nr rejestracyjny": "PLLLLL",
+//       "Klasa auta": "A",
+//       "Rodzaj": "Van",
+//       "id": 1
+//     },
+//     {
+//       "GPS": "Tak",
+//       "Isofix": "Tak",
+//       "Hak": "Tak",
+//       "Dodatkowy kierowca": "Nie",
+//       "Fotelik": "Tak",
+//       "Model auta": "Toyotaaa",
+//       "Status": "Zaakceptowano",
+//       "Imię": "Katarzyna",
+//       "Nazwisko": "Trutka",
+//       "Telefon": "655533662",
+//       "Email": "trutkanaszczury@gmail.com",
+//       "Nr dowodu osobistego": "718 30L",
+//       "Pesel": "92873728452",
+//       "NIP": "892829381",
+//       "Regon": "382520680",
+//       "Ulica i nr domu": "Dr Oetkera 55",
+//       "Kod pocztowy": "09-410",
+//       "Miasto": "Warszawa",
+//       "Kraj": "Polska",
+//       "Data odbioru": "15-09-2023",
+//       "Data zwrotu": "10-10-2023",
+//       "Miejsce odbioru": "Szwankowskiego 2",
+//       "Miejsce zwrotu": "Szwankowskiego 2",
+//       "Nr rejestracyjny": "BI 23564",
+//       "Klasa auta": "C",
+//       "Rodzaj": "Van",
+//       "id": 2
+//     },
+//     {
+//       "GPS": "Tak",
+//       "Isofix": "Tak",
+//       "Hak": "Tak",
+//       "Dodatkowy kierowca": "Nie",
+//       "Fotelik": "-",
+//       "Model auta": "Lamboo",
+//       "Imię": "Mariusz",
+//       "Nazwisko": "Pudzianowski",
+//       "Telefon": "782635109",
+//       "Email": "pudziantop@gmail.com",
+//       "Nr dowodu osobistego": "RFV 738",
+//       "Pesel": "75019283620",
+//       "NIP": "4117294362",
+//       "Regon": "893748264",
+//       "Ulica i nr domu": "Ciężarowa 100/3",
+//       "Kod pocztowy": "02-137",
+//       "Miasto": "Pudzianowo",
+//       "Kraj": "Polska",
+//       "Data odbioru": "01-09-2023",
+//       "Data zwrotu": "10-09-2023",
+//       "Miejsce odbioru": "Szwankowskiego 4A/15",
+//       "Miejsce zwrotu": "Szwankowskiego 4A/15",
+//       "Nr rejestracyjny": "G1 RSW45",
+//       "Klasa auta": "C",
+//       "Rodzaj": "Osobowe",
+//       "Status": "Zaakceptowano",
+//       "id": 3
+//     },
+//     {
+//       "Imię": "Grzegorz",
+//       "Nazwisko": "Bąk",
+//       "Telefon": "872635901",
+//       "Email": "baczek123@wp.pl",
+//       "Nr dowodu osobistego": "G5T 244",
+//       "Pesel": "98274718902",
+//       "NIP": "637233898",
+//       "Regon": "832473272",
+//       "Ulica i nr domu": "Pszczelarska 12/3",
+//       "Kod pocztowy": "14-560",
+//       "Miasto": "Wrocław",
+//       "Kraj": "Polska",
+//       "Data odbioru": "11-09-2023",
+//       "Data zwrotu": "16-09-2023",
+//       "Miejsce odbioru": "Szwankowskiego 4A/15",
+//       "Miejsce zwrotu": "Szwankowskiego 4A/15",
+//       "Nr rejestracyjny": "BI 23564",
+//       "Klasa auta": "C",
+//       "Rodzaj": "Van",
+//       "Model auta": "Toyotaaa",
+//       "GPS": "Tak",
+//       "Isofix": "Tak",
+//       "Hak": "-",
+//       "Dodatkowy kierowca": "Nie",
+//       "Status": "Zaakceptowano",
+//       "id": 4
+//     },
+//     {
+//       "Imię": "Adam ",
+//       "Nazwisko": "Mickiewicz",
+//       "Telefon": "738972645",
+//       "Email": "dziady@wp.pl",
+//       "Nr dowodu osobistego": "PAN TAD",
+//       "Pesel": "839471829318",
+//       "NIP": "82383929",
+//       "Regon": "23424455",
+//       "Ulica i nr domu": "Soplicowa 29%",
+//       "Kod pocztowy": "04-900",
+//       "Miasto": "Soplicowo",
+//       "Kraj": "Polska",
+//       "Data odbioru": "13-09-2023",
+//       "Data zwrotu": "16-09-2023",
+//       "Miejsce odbioru": "Defilad 34",
+//       "Miejsce zwrotu": "Defilad 34",
+//       "Nr rejestracyjny": "G1 RSW45",
+//       "Klasa auta": "C",
+//       "Rodzaj": "Osobowe",
+//       "GPS": "Tak",
+//       "Isofix": "Nie",
+//       "Hak": "Tak",
+//       "Dodatkowy kierowca": "Tak",
+//       "Fotelik": "Nie",
+//       "Status": "Nowa prośba",
+//       "Model auta": "Lamboo",
+//       "id": 5
+//     }
+//   ]
+// }

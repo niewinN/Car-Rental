@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "phone": "123-456-7890",
+      "password": "hashed_password_1"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane@example.com",
+      "phone": "987-654-3210",
+      "password": "hashed_password_2"
+    }
+  ],
+  "register": [
+    {
+      "firstName": "Jan",
+      "lastName": "Nowak",
+      "email": "jan.nowak@wp.pl",
+      "phoneNumber": "54354354353",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 2
+    },
+    {
+      "firstName": "Kasi",
+      "lastName": "Skowylas",
+      "email": "kasia.skowylas@wp.pl",
+      "phoneNumber": "5435435353",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 4
+    },
+    {
+      "firstName": "Test",
+      "lastName": "Testowanski",
+      "email": "test.testowanski@wp.pl",
+      "phoneNumber": "543534533",
+      "password": "EloElo12@",
+      "confirmPassword": "EloElo12@",
+      "update": false,
+      "id": 5
+    }
+  ]
+}

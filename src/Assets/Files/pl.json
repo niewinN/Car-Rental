@@ -1,0 +1,311 @@
+{
+	"nav": {
+		"subTitle": "Odkryj wolność na czterech kółkach - wypożycz marzenia",
+		"login": "Zaloguj",
+		"reservation": "Rezerwacja",
+		"flota": "Flota",
+		"contact": "Kontakt"
+	},
+	"carSlider": {
+		"slogan1": "Uzupełnij kryteria rezerwacji i podróżuj bez granic!",
+		"slogan2": "Wynajmij auto swoich marzeń!",
+		"slogan3": "Twoje auto na każdą okazję!",
+		"slogan4": "Moja wypożyczalnia w Polsce!"
+	},
+	"reservation": "Rezerwacje: +48 932 023 021",
+	"button": "Wyszukaj samochód",
+	"selectCity": {
+		"none": "Wybierz miasto",
+		"one": "Warszawa, Okopowa 1",
+		"two": "Warszawa, Plac Defilad 1"
+	},
+	"refund": {
+		"ref": "Zwróc samochód w innej lokalizacji",
+		"age": "Prawo jazdy < 1 rok"
+	},
+	"Date": {
+		"pick": "Data odbioru",
+		"refund": "Data zwrotu"
+	},
+	"filterParameters": {
+		"type": "TYP POJAZDU",
+		"personal": "Osobowe",
+		"bus": "VAN",
+		"delivery": "Dostawcze",
+		"taxi": "Taxi",
+		"gearbox": "SKRZYNIA BIEGÓW",
+		"manual": "Manualna",
+		"auto": "Automatyczna",
+		"rent": "Wynajem",
+		"short": "Krótkoterminowy",
+		"long": "Długoterminowy"
+	},
+	"footer": {
+		"name": "CAR RENTAL",
+		"address": "01-123 Warszawa",
+		"street": "Okopowa 1",
+		"contact": "Kontakt",
+		"links": {
+			"terms": "Ogólne warunki najmu pojazdu",
+			"info": "Klauzule informacyjne",
+			"privacy": "Polityka prywatności"
+		},
+		"complaints": "Reklamacje",
+		"reservation": "Rezerwacje:",
+		"phoneNumber": "+48 754 353 535",
+		"contactUs": "Skontaktuj się z nami!",
+		"email": "car.rental@kontakt.pl"
+	},
+	"authors": "Wykonali:",
+	"price": {
+		"sum": "RAZEM",
+		"summary": "Uzupełnij wszystkie dane",
+		"book": "Zarezerwuj"
+	},
+	"premission": {
+		"one": "Oświadczam, że przed zawarciem umowy zapoznałem się z obowiązującym u Car Rental Sp. z o.o. z siedzibą w Warszawie (01-123), przy ul. Okopowa 1 Regulaminem w zakresie najmu samochodów, rozumiem i akceptuję jego treść.",
+		"two": "Wyrażam zgodę na przetwarzanie moich danych osobowych. Więcej informacji na stronie www.carrental.pl w zakładce polityka prywatności."
+	},
+	"reservationForm": {
+		"fetchCompanyData": "Pobierz dane firmy",
+		"company": "Firma",
+		"title": {
+			"id": "Dane osobowe",
+			"address": "Dane adresowe"
+		},
+		"name": "Imię i Nazwisko:",
+		"phone": "Numer telefonu:",
+		"id-card-licence": "Numer prawa jazdy:",
+		"address": "Ulica i numer domu:",
+		"zip-code": "Kod pocztowy:",
+		"City": "Miasto:",
+		"Country": "Kraj:",
+		"nip": "NIP:",
+		"regon": "REGON:"
+	},
+	"reservationSummary": {
+		"summary": "Podsumowanie",
+		"pick-up": "Data i godzina odbioru",
+		"refund": "Data i godzina zwrot",
+		"pick-up-place": "Miejsce odbioru",
+		"refund-place": "Miejsce zwrotu",
+		"street": {
+			"one": "Warszawa ul. Okopowa 62"
+		}
+	},
+	"yourCars": "Twoje samochody",
+	"login": {
+		"login": "Zaloguj się",
+		"registration": "Zarejestruj się",
+		"for": "za pomocą formularza",
+		"panel": {
+			"name": "Imię",
+			"lastName": "Nazwisko",
+			"phone": "Numer telefonu:",
+			"password": "Hasło",
+			"confirm": "Powtórz hasło"
+		},
+		"oneClick": "Lub jednym kliknięciem",
+		"errors": {
+			"match": "Hasła muszą być takie same!",
+			"wrong": "Hasło nie spełnia wymogów (min 5 znaków, mała i duża litera, cyfra oraz znak specjalny)!"
+		}
+	},
+	"FAQ": {
+		"questions": "Pytania",
+		"terms": "Regulamin",
+		"privacy": "Polityka prywatności",
+		"search": "Wyszukaj"
+	},
+	"buttons": {
+		"cancel": "Anuluj",
+		"confirm": "Zatwierdź"
+	},
+	"months": {
+		"january": "Styczeń",
+		"february": "Luty",
+		"march": "Marzec",
+		"april": "Kwiecień",
+		"may": "Maj",
+		"june": "Czerwiec",
+		"july": "Lipiec",
+		"august": "Sierpień",
+		"september": "Wrzesień",
+		"october": "Październik",
+		"november": "Listopad",
+		"december": "Grudzień"
+	},
+	"errors": {
+		"nameSurname": "Proszę podać poprawne imię i nazwisko",
+		"phoneNumber": "Proszę podać poprawny numer telefonu (9 cyfr)",
+		"email": "Proszę podać poprawny adres e-mail",
+		"driveNr": "Numer prawa jazdy jest wymagany",
+		"streetNr": "Ulica i nr domu są wymagane",
+		"zipCode": "Proszę podać poprawny kod pocztowy (format XX-XXX)",
+		"city": "Miasto jest wymagane",
+		"country": "Kraj jest wymagany",
+		"carAgreement": "Zaakceptowanie regulaminu jest wymagane",
+		"personalDataAgreement": "Zgoda na przetwarzanie danych jest wymagana!",
+		"valid": "Formularz został pomyślnie wysłany"
+	},
+	"privacyOptions": "Twoje opcje prywatności",
+	"cookieDescription": "Ta strona internetowa wykorzystuje pliki cookie, tagi i podobne technologie, dzięki którym możemy zaoferować użytkownikom najlepszy poziom usług. Oprócz kategorii wymienionych poniżej, nasza strona wykorzystuje również niezbędne pliki cookie, które zapewniają jej funkcjonowanie. Więcej szczegółów można znaleźć w naszej polityce plików cookie. Poniżej można zarządzać swoimi preferencjami. Wybierając POTWIERDZAM, zgadzasz się na używanie przez nas plików cookie zgodnie z tymi preferencjami. Aby zapamiętać te preferencje, będziemy używać odpowiedniego pliku cookie.",
+	"trafficAnalysis": {
+		"title": "Analiza ruchu sieciowego",
+		"description": "Te pliki cookie są wykorzystywane do zbierania danych o tym, jak użytkownicy korzystają z naszej strony internetowej."
+	},
+	"adsAndProfiling": {
+		"title": "Reklama i profilowanie",
+		"description": "Te pliki pozwalają nam dobierać reklamy, które widzisz na innych stronach."
+	},
+	"optimization": {
+		"title": "Optymalizacja",
+		"description": "Te pliki pozwalają nam zoptymalizować Twoją wizytę na stronie CAR-RENTAL.PL i poprawić korzystanie z niej."
+	},
+	"confirm": "POTWIERDZAM",
+	"website": "CAR-RENTAL.PL",
+	"address": {
+		"city": "01-123 Warszawa",
+		"street": "Okopowa 1"
+	},
+	"taxInfo": {
+		"nip": "NIP: 5435435353",
+		"regon": "REGON: 345345435",
+		"bankAccount": "KONTO BANKOWE:",
+		"bankAccountNr": "4354353453453453453535"
+	},
+	"findUs": "Znajdź nas na mapie i zobacz gdzie możesz odebrać swój samochód!",
+	"labels": {
+		"name": "Imię i nazwisko",
+		"phoneNumber": "Numer telefonu",
+		"email": "E-mail",
+		"subject": "Temat",
+		"message": "Wiadomość",
+		"submitButton": "Wyślij"
+	},
+	"formTitle": "Formularz kontaktowy",
+	"validation": {
+		"requiredName": "Imię i nazwisko jest wymagane",
+		"shortName": "Imię i nazwisko jest zbyt krótkie",
+		"longName": "Imię i nazwisko jest zbyt długie",
+		"invalidName": "Proszę podać poprawne imię i nazwisko",
+		"requiredPhone": "Numer telefonu jest wymagany",
+		"invalidPhone": "Proszę podać poprawny numer telefonu",
+		"requiredEmail": "E-mail jest wymagany",
+		"shortEmail": "Adres e-mail jest zbyt krótki",
+		"longEmail": "Adres e-mail jest zbyt długi",
+		"invalidEmail": "Proszę podać poprawny adres e-mail",
+		"requiredSubject": "Temat jest wymagany",
+		"shortSubject": "Temat jest zbyt krótki",
+		"longSubject": "Temat jest zbyt długi",
+		"requiredMessage": "Wiadomość jest wymagana",
+		"shortMessage": "Wiadomość jest zbyt krótka",
+		"longMessage": "Wiadomość jest zbyt długa"
+	},
+	"validationSummary": {
+		"summaryNameSurname": {
+			"summaryRequired": "Imię i nazwisko jest wymagane",
+			"summaryMatches": "Proszę podać poprawne imię i nazwisko"
+		},
+		"summaryPhoneNumber": {
+			"summaryRequired": "Numer telefonu jest wymagany",
+			"summaryMatches": "Proszę podać poprawny numer telefonu"
+		},
+		"summaryEmail": {
+			"summaryRequired": "Adres e-mail jest wymagany",
+			"summaryMatches": "Proszę podać poprawny adres e-mail"
+		},
+		"summaryDriveNr": "Numer prawa jazdy jest wymagany",
+		"summaryStreetNr": "Ulica i nr domu są wymagane",
+		"summaryZipCode": {
+			"summaryRequired": "Kod pocztowy jest wymagany",
+			"summaryMatches": "Proszę podać poprawny kod pocztowy (format XX-XXX)"
+		},
+		"summaryCity": "Miasto jest wymagane",
+		"summaryCountry": "Kraj jest wymagany",
+		"summaryCarAgreement": "Zaakceptowanie regulaminu jest wymagane!",
+		"summaryPersonalDataAgreement": "Zgoda na przetwarzanie danych jest wymagana!",
+		"summaryNip": "NIP jest wymagany",
+		"summaryRegon": "REGON jest wymagany"
+	},
+	"buttons": {
+		"cancel": "Anuluj",
+		"confirm": "Zatwierdź"
+	},
+	"months": {
+		"january": "Styczeń",
+		"february": "Luty",
+		"march": "Marzec",
+		"april": "Kwiecień",
+		"may": "Maj",
+		"june": "Czerwiec",
+		"july": "Lipiec",
+		"august": "Sierpień",
+		"september": "Wrzesień",
+		"october": "Październik",
+		"november": "Listopad",
+		"december": "Grudzień"
+	},
+	"reservationCriteria": "Kryteria rezerwacji",
+	"type": "Typ pojazdu",
+	"carTypes": {
+		"sedan": "Osobowe",
+		"van": "VAN",
+		"delivery": "Dostawcze",
+		"taxi": "Taxi"
+	},
+	"rent": "Wynajem",
+	"rentDuration": {
+		"shortTerm": "Krótkoterminowy",
+		"longTerm": "Długoterminowy"
+	},
+	"gearbox": "Skrzynia biegów",
+	"gearboxTypes": {
+		"manual": "Manualna",
+		"automatic": "Automatyczna"
+	},
+	"fuel": "Rodzaj paliwa",
+	"fuelTypes": {
+		"gasoline": "Benzyna",
+		"diesel": "Diesel",
+		"lpg": "LPG",
+		"gasolineLpg": "Benzyna + LPG"
+	},
+	"services": "Dodatkowe usługi",
+	"serviceOptions": {
+		"towHitch": "Hak holowniczy",
+		"childSeat": "Fotelik dla dziecka (9 - 36 kg)",
+		"babySeat": "Fotelik nosidełko (0 - 9 kg)",
+		"gps": "Nawigacja GPS",
+		"extraDriver": "Dodatkowy kierowca",
+		"carCharger": "Ładowarka samochodowa",
+		"phoneHolder": "Uchwyt na telefon",
+		"differentLocation": "Odbiór auta z innej lokalizacji"
+	},
+	"noCarsMatchingCriteria": "Nie ma samochodów spełniających Twoje kryteria.",
+	"reserve": "Zarezerwuj",
+	"reserved": "Dodano do koszyka",
+	"carFeatures": {
+		"Manualna": "Manualna",
+		"5 osobowy": "5 osobowy",
+		"Diesel": "Diesel",
+		"Bagażnik - 280L": "Bagażnik - 280L",
+		"5 drzwiowy": "5 drzwiowy",
+		"Automatyczna": "Automatyczna",
+		"Benzyna": "Benzyna",
+		"Bagażnik - 380L": "Bagażnik - 380L",
+		"LPG": "LPG",
+		"Bagażnik - 480L": "Bagażnik - 480L"
+	},
+	"yourBasket": "Twój koszyk ({{count}})",
+	"noCarsAdded": "Nie dodałeś jeszcze żadnego samochodu",
+	"reservationsPhone": "Rezerwacje: +48 565 323 231",
+	"addMoreCars": "Dodaj więcej samochodów",
+	"thankYou": "Dziękujemy za skorzystanie z naszych usług i dokonanie rezerwacji!",
+	"contactSoon": "Wkrótce się z tobą skontaktujemy",
+	"happyJourney": "Życzymy udanej podróży 😊",
+	"toastReserveError": "Proszę ustawić datę odbioru i zwrotu oraz miasto przed kontynuacją",
+	"toastFormSuccess": "Formularz został wysłany pomyślnie!",
+	"errorNip": "Nie znaleziono informacji na temat firmy. Uzupełnij dane ręcznie.",
+	"errorFleet": "W tym momencie nie mamy danego samochodu w naszej flocie"
+}
