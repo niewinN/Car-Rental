@@ -292,6 +292,7 @@
 		"Diesel": "Diesel",
 		"Bagażnik - 280L": "Bagażnik - 280L",
 		"5 drzwiowy": "5 drzwiowy",
+		"Hook": "Hak holowniczy",
 		"Automatyczna": "Automatyczna",
 		"Benzyna": "Benzyna",
 		"Bagażnik - 380L": "Bagażnik - 380L",
@@ -323,6 +324,7 @@
 	"validPhone": "Podaj poprawny numer telefonu",
 	"passwordMin": "Hasło musi zawierać min. 6 znaków",
 	"passwordRequirements": "Hasło musi zawierać (duża i mała litera, cyfra, znak specjalny)",
+	"passwordRepeat": "Powtórzenie hasła jest wymagane",
 	"passwordsMustMatch": "Hasła muszą być takie same",
 	"continueWithClick": "Kontynuuj jednym kliknięciem!",
 	"emailAlreadyTaken": "E-mail jest już zajęty",
@@ -373,5 +375,12 @@
 	},
 	"faqTitle": "Masz pytanie?",
 	"faqText": "Zobacz najczęściej zadawane pytania lub skontaktuj się z nami telefonicznie!",
-	"oneClick": "Kontynuuj jednym kliknięciem!"
+	"oneClick": "Kontynuuj jednym kliknięciem!",
+	"auth": {
+		"name": "Imię",
+		"surname": "Nazwisko",
+		"phone": "Nr telefonu",
+		"password": "Hasło",
+		"passwordRepeat": "Powtórz hasło"
+	}
 }

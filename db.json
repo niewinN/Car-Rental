@@ -57,6 +57,16 @@
       "confirmPassword": "halinanowak12@A",
       "update": false,
       "id": 6
+    },
+    {
+      "firstName": "Kamil",
+      "lastName": "Nowakowski",
+      "email": "kamil.nowakowski@wp.pl",
+      "phoneNumber": "4343242424",
+      "password": "Kamilnowakowski12@",
+      "confirmPassword": "Kamilnowakowski12@",
+      "update": false,
+      "id": 7
     }
   ]
 }

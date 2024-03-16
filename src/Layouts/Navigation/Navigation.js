@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect } from "react"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
 import {
 	Nav,
 	NavLink,
@@ -15,11 +15,11 @@ import {
 	NavList,
 	NavLoginText,
 	NavFontAwesomeIcon,
-} from '../../Assets/Styles/Navigation/Navigation.styles'
-import { useTranslation } from 'react-i18next'
-import AuthModal from '../../Components/LoginAndRegistration/AuthModal'
-import EditDataModal from '../../Components/LoginAndRegistration/EditDataModal'
-import { useUserData } from '../../Contexts/UserDataContext'
+} from "../../Assets/Styles/Navigation/Navigation.styles"
+import { useTranslation } from "react-i18next"
+import AuthModal from "../../Components/LoginAndRegistration/AuthModal"
+import EditDataModal from "../../Components/LoginAndRegistration/EditDataModal"
+import { useUserData } from "../../Contexts/UserDataContext"
 
 const Navigation = () => {
 	const [showNav, setShowNav] = useState(false)
@@ -43,10 +43,10 @@ const Navigation = () => {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll)
+		window.addEventListener("scroll", handleScroll)
 
 		return () => {
-			window.removeEventListener('scroll', handleScroll)
+			window.removeEventListener("scroll", handleScroll)
 		}
 	}, [])
 
@@ -71,41 +71,41 @@ const Navigation = () => {
 	const { t } = useTranslation()
 
 	const menuItems = [
-		{ name: t('nav.reservation'), path: 'reservation' },
-		{ name: t('nav.flota'), path: 'fleet' },
-		{ name: 'FAQ', path: 'faq' },
-		{ name: t('nav.contact'), path: 'contact' },
+		{ name: t("nav.reservation"), path: "reservation" },
+		{ name: t("nav.flota"), path: "fleet" },
+		{ name: "FAQ", path: "faq" },
+		{ name: t("nav.contact"), path: "contact" },
 	]
 
 	useEffect(() => {
-		const loginTime = localStorage.getItem('loginTime')
+		const loginTime = localStorage.getItem("loginTime")
 		const currentTime = new Date().getTime()
 
 		if (currentTime - loginTime > 3600000) {
-			localStorage.removeItem('loginTime')
-			localStorage.removeItem('currentUser')
+			localStorage.removeItem("loginTime")
+			localStorage.removeItem("currentUser")
 			setCurrentUser(null)
 		} else {
-			const storedUser = JSON.parse(localStorage.getItem('currentUser'))
+			const storedUser = JSON.parse(localStorage.getItem("currentUser"))
 			setCurrentUser(storedUser)
 		}
 	}, [])
 
 	const handleLogout = () => {
-		localStorage.removeItem('loginTime')
-		localStorage.removeItem('currentUser')
+		localStorage.removeItem("loginTime")
+		localStorage.removeItem("currentUser")
 		setCurrentUser(null)
 		setIsEditModalOpen(false)
 		setIsAuthModalOpen(false)
 	}
 
 	return (
-		<NavContainer isScrolling={isScrolling}>
+		<NavContainer $isScrolling={isScrolling}>
 			<StyledContainer>
 				<Nav>
 					<NavLogo>
 						<NavLogoName href='/'>CAR RENTAL</NavLogoName>
-						<NavLogoText>{t('nav.subTitle')}</NavLogoText>
+						<NavLogoText>{t("nav.subTitle")}</NavLogoText>
 					</NavLogo>
 
 					<NavList $showNav={showNav}>
@@ -125,12 +125,12 @@ const Navigation = () => {
 						<NavLogin $showNav={showNav} onClick={handleNavLoginClick}>
 							<NavFontAwesomeIcon icon={faUser} />
 							<NavLoginText>
-								{currentUser ? `${currentUser.firstName}` : t('nav.login')}
+								{currentUser ? `${currentUser.firstName}` : t("nav.login")}
 							</NavLoginText>
 						</NavLogin>
 						<BurgerIcon onClick={handleClick} $isExpanded={showNav}>
 							{[1, 2, 3].map(num => (
-								<BurgerLine key={num} className={showNav ? 'active' : ''} />
+								<BurgerLine key={num} className={showNav ? "active" : ""} />
 							))}
 						</BurgerIcon>
 					</NavRight>

@@ -30,15 +30,15 @@
 	"filterParameters": {
 		"type": "VEHICLE TYPE",
 		"personal": "Personal",
-		"bus": "Minibuses/Van",
+		"bus": "VAN",
 		"delivery": "Delivery",
 		"taxi": "Taxi",
-		"gear": "TRANSMISSION",
+		"gearbox": "GEARBOX",
 		"manual": "Manual",
 		"auto": "Automatic",
 		"rent": "Rental",
-		"short": "ShortTerm",
-		"long": "LongTerm",
+		"short": "Short term",
+		"long": "Long term",
 		"steering wheel": "Steering Wheel"
 	},
 	"footer": {
@@ -218,7 +218,7 @@
 	"reservationCriteria": "Reservation Criteria",
 	"type": "Vehicle Type",
 	"carTypes": {
-		"sedan": "Sedan",
+		"sedan": "Personal",
 		"van": "VAN",
 		"delivery": "Delivery",
 		"taxi": "Taxi"
@@ -255,12 +255,13 @@
 	"reserve": "Reserve",
 	"reserved": "Added to cart",
 	"carFeatures": {
-		"Manual": "Manual",
+		"Manualna": "Manual",
 		"5 osobowy": "5-seater",
 		"Diesel": "Diesel",
 		"Bagażnik - 280L": "Trunk - 280L",
 		"5 drzwiowy": "5-door",
-		"Automat": "Automatic",
+		"Automatyczna": "Automatic",
+		"Hook": "Hook",
 		"Benzyna": "Gasoline",
 		"Bagażnik - 380L": "Trunk - 380L",
 		"LPG": "LPG",
@@ -291,6 +292,7 @@
 	"validPhone": "Enter a valid phone number",
 	"passwordMin": "Password must contain at least 6 characters",
 	"passwordRequirements": "Password must include (upper and lower case letters, a number, a special character)",
+	"passwordRepeat": "Password repetition is required",
 	"passwordsMustMatch": "Passwords must match",
 	"continueWithClick": "Continue with one click!",
 	"emailAlreadyTaken": "E-mail is already taken",
@@ -341,5 +343,12 @@
 	},
 	"faqTitle": "Do you have any question?",
 	"faqText": "See the most frequently asked questions or contact us by phone!",
-	"oneClick": "Continue with one click!"
+	"oneClick": "Continue with one click!",
+	"auth": {
+		"name": "Name",
+		"surname": "Surname",
+		"phone": "Phone number",
+		"password": "Password",
+		"passwordRepeat": "Repeat password"
+	}
 }

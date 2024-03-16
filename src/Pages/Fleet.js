@@ -51,7 +51,6 @@ function Fleet() {
 	const [currentPage, setCurrentPage] = useState(1)
 	const [showAllItems, setShowAllItems] = useState(false)
 	const [itemsPerPage, setItemsPerPage] = useState(5)
-	const [prevItemsPerPage, serPrevItemsPerPage] = useState(5)
 
 	const indexOfLastItem = currentPage * itemsPerPage
 	const indexOfFirstItem = indexOfLastItem - itemsPerPage

@@ -61,45 +61,39 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 		validationSchema: isLogin
 			? Yup.object({
 					email: Yup.string()
-						.required("E-mail jest wymagany")
+						.required(t("emailRequired"))
 						.matches(
 							/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-							"Podaj poprawny adres e-mail"
+							t("validEmail")
 						),
-					password: Yup.string().required("Hasło jest wymagane"),
+					password: Yup.string().required(t("passwordRequired")),
 			  })
 			: Yup.object().shape({
 					firstName: Yup.string()
-						.required("Imię jest wymagane")
-						.matches(
-							/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/,
-							"Podaj poprawnę imię "
-						),
+						.required(t("firstNameRequired"))
+						.matches(/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/, t("validFirstName")),
 					lastName: Yup.string()
-						.required("Nazwisko jest wymagane")
-						.matches(
-							/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/,
-							"Podaj poprawnę nazwisko"
-						),
+						.required(t("lastNameRequired"))
+						.matches(/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/, t("validLastName")),
 					email: Yup.string()
-						.required("E-mail jest wymagany")
+						.required(t("emailRequired"))
 						.matches(
 							/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-							"Podaj poprawny adres e-mail"
+							t("validEmail")
 						),
 					phoneNumber: Yup.string()
-						.required("Numer telefonu jest wymagany")
-						.matches(/^\+?(\d{8,15})$/, "Podaj poprawny numer telefonu"),
+						.required(t("phoneRequired"))
+						.matches(/^\+?(\d{8,15})$/, t("validPhone")),
 					password: Yup.string()
-						.required("Hasło jest wymagane")
-						.min(6, "Hasło musi zawierać min. 6 znaków")
+						.required(t("passwordRequired"))
+						.min(6, t("passwordMin"))
 						.matches(
 							/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/,
-							"Hasło musi zawierać (duża i mała litera, cyfra, znak specjalny)"
+							t("passwordRequirements")
 						),
 					confirmPassword: Yup.string()
-						.required("Powtórzenie hasła jest wymagane")
-						.oneOf([Yup.ref("password"), null], "Hasła muszą być takie same"),
+						.required(t("passwordRepeat"))
+						.oneOf([Yup.ref("password"), null], t("passwordsMustMatch")),
 			  }),
 		onSubmit: values => {
 			setUserData(values)
@@ -181,12 +175,12 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 					localStorage.setItem("loginTime", loginTime)
 					localStorage.setItem("currentUser", JSON.stringify(user))
 				} else {
-					setLoginError("E-mail lub hasło jest nieprawidłowe.")
+					setLoginError(t("loginError"))
 				}
 			})
 			.catch(error => {
-				console.error("Błąd podczas próby logowania:", error)
-				setLoginError("Błąd podczas logowania, spróbuj ponownie później.")
+				console.error(t("loginAttemptError"), error)
+				setLoginError(t("loginAttemptError"))
 			})
 	}
 
@@ -218,7 +212,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 			<ModalOverlay
 				style={modalOverlayStyle}
 				className={overlayAnimation}
-				isOpen={isOpen}>
+				$isOpen={isOpen}>
 				<AuthModalWrapper>
 					<AuthModalContainer
 						className={modalAnimation}
@@ -227,10 +221,10 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 						}}>
 						<AuthModalContent>
 							<TabContainer>
-								<SubmitButton active={isLogin} onClick={switchToLogin}>
+								<SubmitButton $active={isLogin} onClick={switchToLogin}>
 									{t("login.login")}
 								</SubmitButton>
-								<SubmitButton active={!isLogin} onClick={switchToRegistration}>
+								<SubmitButton $active={!isLogin} onClick={switchToRegistration}>
 									{t("login.registration")}
 								</SubmitButton>
 							</TabContainer>
@@ -254,7 +248,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='password'
 												name='password'
-												placeholder='Hasło'
+												placeholder={t("auth.password")}
 												onChange={formik.handleChange}
 												value={formik.values.password}
 											/>
@@ -269,7 +263,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='text'
 												name='firstName'
-												placeholder='Imię'
+												placeholder={t("auth.name")}
 												onChange={formik.handleChange}
 												value={formik.values.firstName}
 											/>
@@ -279,7 +273,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='text'
 												name='lastName'
-												placeholder='Nazwisko'
+												placeholder={t("auth.surname")}
 												onChange={formik.handleChange}
 												value={formik.values.lastName}
 											/>
@@ -300,7 +294,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='text'
 												name='phoneNumber'
-												placeholder='Nr telefonu'
+												placeholder={t("auth.phone")}
 												onChange={formik.handleChange}
 												value={formik.values.phoneNumber}
 											/>
@@ -310,7 +304,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='password'
 												name='password'
-												placeholder='Hasło'
+												placeholder={t("auth.password")}
 												onChange={formik.handleChange}
 												value={formik.values.password}
 											/>
@@ -320,7 +314,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 											<Input
 												type='password'
 												name='confirmPassword'
-												placeholder='Powtórz hasło'
+												placeholder={t("auth.passwordRepeat")}
 												onChange={formik.handleChange}
 												value={formik.values.confirmPassword}
 											/>
@@ -359,7 +353,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 				</AuthModalWrapper>
 			</ModalOverlay>
 			<SuccessModal
-				isOpen={isModalOpen}
+				$isOpen={isModalOpen}
 				onRequestClose={() => {
 					setIsModalOpen(false)
 					setIsOpen(false) // Możesz też chcieć zresetować ten stan

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../theme'
+import styled from "styled-components"
+import theme from "../theme"
 
 export const CardWrapper = styled.div`
 	display: flex;
@@ -40,8 +40,8 @@ export const Triangle = styled.div`
 	top: 0;
 	left: 0;
 	height: 0px;
-	border-left: ${({ cardWidth }) => cardWidth}px solid ${theme.colors.primary};
-	border-bottom: ${({ cardHeight }) => cardHeight}px solid transparent;
+	border-left: ${({ $cardWidth }) => $cardWidth}px solid ${theme.colors.primary};
+	border-bottom: ${({ $cardHeight }) => $cardHeight}px solid transparent;
 `
 
 export const AutoNameDiv = styled.div`
@@ -55,7 +55,7 @@ export const AutoNameDiv = styled.div`
 	text-align: center;
 	text-align: center;
 	p {
-		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-family: Georgia, "Times New Roman", Times, serif;
 		font-size: 26px;
 		font-weight: 700;
 		color: #ffffff;

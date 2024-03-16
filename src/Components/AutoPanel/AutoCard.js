@@ -1,5 +1,5 @@
-import AutoServices from './AutoServices'
-import React from 'react'
+import AutoServices from "./AutoServices"
+import React from "react"
 import {
 	CardWrapper,
 	CardTop,
@@ -7,43 +7,45 @@ import {
 	AutoNameDiv,
 	ImageWrapper,
 	ServicesDiv,
-} from '../../Assets/Styles/AutoPanel/AutoCard.styles'
+} from "../../Assets/Styles/AutoPanel/AutoCard.styles"
+import { useTranslation } from "react-i18next"
 
 function AutoCard(props) {
+	const { t } = useTranslation()
 	// const image = require('../../Assets/Images/auto.png');
 	// const carimage2=require('../../Assets/Images/Ford_Focus2.png');
 	const servicesList = [
 		{
-			image: require('../../Assets/Images/ServiceImages/person2.png'),
-			description: '5 osobowy',
+			image: require("../../Assets/Images/ServiceImages/person2.png"),
+			description: t("carFeatures.5 osobowy"),
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/fuel2.png'),
-			description: 'Diesel',
+			image: require("../../Assets/Images/ServiceImages/fuel2.png"),
+			description: t("carFeatures.Diesel"),
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/gearbox.png'),
-			description: 'Manualna',
+			image: require("../../Assets/Images/ServiceImages/gearbox.png"),
+			description: t("carFeatures.Manualna"),
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/boot2.png'),
-			description: 'Bagażnik - 280L',
+			image: require("../../Assets/Images/ServiceImages/boot2.png"),
+			description: t("carFeatures.Bagażnik - 280L"),
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/door2.png'),
-			description: '5-cio drzwiowy',
+			image: require("../../Assets/Images/ServiceImages/door2.png"),
+			description: t("carFeatures.5 drzwiowy"),
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/isofix2.png'),
-			description: 'Isofix',
+			image: require("../../Assets/Images/ServiceImages/isofix2.png"),
+			description: "Isofix",
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/gps2.png'),
-			description: 'GPS',
+			image: require("../../Assets/Images/ServiceImages/gps2.png"),
+			description: "GPS",
 		},
 		{
-			image: require('../../Assets/Images/ServiceImages/hook2.png'),
-			description: 'Hak holowniczy',
+			image: require("../../Assets/Images/ServiceImages/hook2.png"),
+			description: t("carFeatures.Hook"),
 		},
 	]
 
@@ -60,17 +62,17 @@ function AutoCard(props) {
 
 	React.useEffect(() => {
 		updateCardDimensions()
-		window.addEventListener('resize', updateCardDimensions) //updating card dimensions by listening the window
+		window.addEventListener("resize", updateCardDimensions) //updating card dimensions by listening the window
 
 		return () => {
-			window.removeEventListener('resize', updateCardDimensions)
+			window.removeEventListener("resize", updateCardDimensions)
 		}
 	}, [])
 
 	return (
 		<CardWrapper>
 			<CardTop ref={cardRef}>
-				<Triangle cardWidth={cardwidth} cardHeight={cardheight}></Triangle>
+				<Triangle $cardWidth={cardwidth} $cardHeight={cardheight}></Triangle>
 				<AutoNameDiv>
 					<p>{props.carName}</p>
 				</AutoNameDiv>

@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import theme from '../theme'
+import styled, { keyframes } from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import theme from "../theme"
 
 export const slideInFromBottom = keyframes`
   from {
@@ -114,7 +114,7 @@ export const Input = styled.input`
 `
 
 export const ModalOverlay = styled.div`
-	display: ${props => (props.isOpen ? 'block' : 'none')};
+	display: ${props => (props.isOpen ? "block" : "none")};
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -142,7 +142,7 @@ export const SubmitButton = styled(TabButton)`
 	color: white;
 	padding: 15px;
 	background-color: ${props =>
-		props.active ? '#cc6646' : `${theme.colors.primary}`};
+		props.$active ? "#cc6646" : `${theme.colors.primary}`};
 
 	&:nth-child(1) {
 		border-radius: 10px 0 0 0;

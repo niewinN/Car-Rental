@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import theme from '../../Assets/Styles/theme'
+import React, { useState } from "react"
+import styled from "styled-components"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import theme from "../../Assets/Styles/theme"
 
 const FaqQuestion = ({ question, answer }) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -13,12 +13,8 @@ const FaqQuestion = ({ question, answer }) => {
 
 	return (
 		<>
-			<FaqQuestionBox onClick={toggleAnswer} isOpen={isOpen}>
-				<FontAwesomeIcon
-					className='arrow-icon'
-					icon={faChevronDown}
-					isOpen={isOpen}
-				/>
+			<FaqQuestionBox onClick={toggleAnswer} $isOpen={isOpen}>
+				<FontAwesomeIcon className='arrow-icon' icon={faChevronDown} />
 				<Question>{question}</Question>
 			</FaqQuestionBox>
 			{isOpen && <Answer>{answer}</Answer>}
@@ -47,7 +43,7 @@ export const FaqQuestionBox = styled.div`
 
 	.arrow-icon {
 		transition: transform 0.3s ease;
-		transform: rotate(${props => (props.isOpen ? '180deg' : '0deg')});
+		transform: rotate(${props => (props.$isOpen ? "180deg" : "0deg")});
 	}
 `
 
