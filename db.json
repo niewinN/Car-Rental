@@ -47,6 +47,16 @@
       "confirmPassword": "EloElo12@",
       "update": false,
       "id": 5
+    },
+    {
+      "firstName": "Halina",
+      "lastName": "Nowak",
+      "email": "halina.nowak@wp.pl",
+      "phoneNumber": "5435435353",
+      "password": "halinanowak12@A",
+      "confirmPassword": "halinanowak12@A",
+      "update": false,
+      "id": 6
     }
   ]
 }

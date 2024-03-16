@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState, useEffect } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
 	faFacebookF,
 	faGoogle,
 	faMicrosoft,
 	faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { faAnglesDown } from '@fortawesome/free-solid-svg-icons'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
-import axios from 'axios'
-import { ErrorMessage } from '../../Assets/Styles/SummaryPanel/ReservationForm.styles'
-import SuccessModal from '../../Layouts/UI/SuccessModal'
-import { useUserData } from '../../Contexts/UserDataContext'
-// import useFacebookLogin from '../../Services/LoginServices/facebookAuth'
-// import useGoogleLogin from '../../Services/LoginServices/googleAuth'
-// import useMicrosoftLogin from '../../Services/LoginServices/microsoftAuth'
+} from "@fortawesome/free-brands-svg-icons"
+import { faAnglesDown } from "@fortawesome/free-solid-svg-icons"
+import { useFormik } from "formik"
+import * as Yup from "yup"
+import axios from "axios"
+import { ErrorMessage } from "../../Assets/Styles/SummaryPanel/ReservationForm.styles"
+import SuccessModal from "../../Layouts/UI/SuccessModal"
+import { useUserData } from "../../Contexts/UserDataContext"
+
 import {
 	ModalOverlay,
 	AuthModalWrapper,
@@ -32,92 +30,90 @@ import {
 	SocialIcon,
 	SocialIconContainer,
 	SocialIconsContainer,
-} from '../../Assets/Styles/LoginAndRegistration/AuthModal.styles'
+} from "../../Assets/Styles/LoginAndRegistration/AuthModal.styles"
+import { useTranslation } from "react-i18next"
 
 const AuthModal = ({ onClose, setCurrentUser }) => {
 	const [isLogin, setIsLogin] = useState(true)
+	const { t } = useTranslation()
 
 	const [isExpanded, setIsExpanded] = useState(false)
 	const [isModalOpen, setIsModalOpen] = useState(false)
-	const [emailError, setEmailError] = useState('')
-	const [loginError, setLoginError] = useState('')
-	const [arrowButtonAnimation, setArrowButtonAnimation] = useState('fade-in')
+	const [emailError, setEmailError] = useState("")
+	const [loginError, setLoginError] = useState("")
+	const [arrowButtonAnimation, setArrowButtonAnimation] = useState("fade-in")
 
 	const [isOpen, setIsOpen] = useState(false)
-	const [modalAnimation, setModalAnimation] = useState('slide-in')
-	const [overlayAnimation, setOverlayAnimation] = useState('fade-in')
+	const [modalAnimation, setModalAnimation] = useState("slide-in")
+	const [overlayAnimation, setOverlayAnimation] = useState("fade-in")
 	const { setUserData } = useUserData()
-	// const { user, initiateLogin } = useFacebookLogin()
-	// // const { initiateGoogleLogin } = useGoogleLogin();
-	// const { googleUser, initiateGoogleLogin } = useGoogleLogin()
-	// const { microsoftUser, initiateMicrosoftLogin } = useMicrosoftLogin()
 
 	// REJESTRACJA - JEŚLI EMAIL ISTNIEJE TO BŁĄD
 	const formik = useFormik({
 		initialValues: {
-			firstName: '',
-			lastName: '',
-			email: '',
-			phoneNumber: '',
-			password: '',
-			confirmPassword: '',
+			firstName: "",
+			lastName: "",
+			email: "",
+			phoneNumber: "",
+			password: "",
+			confirmPassword: "",
 		},
 		validationSchema: isLogin
 			? Yup.object({
 					email: Yup.string()
-						.required('E-mail jest wymagany')
+						.required("E-mail jest wymagany")
 						.matches(
 							/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-							'Podaj poprawny adres e-mail'
+							"Podaj poprawny adres e-mail"
 						),
-					password: Yup.string().required('Hasło jest wymagane'),
+					password: Yup.string().required("Hasło jest wymagane"),
 			  })
 			: Yup.object().shape({
 					firstName: Yup.string()
-						.required('Imię jest wymagane')
+						.required("Imię jest wymagane")
 						.matches(
 							/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/,
-							'Podaj poprawnę imię '
+							"Podaj poprawnę imię "
 						),
 					lastName: Yup.string()
-						.required('Nazwisko jest wymagane')
+						.required("Nazwisko jest wymagane")
 						.matches(
 							/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/,
-							'Podaj poprawnę nazwisko'
+							"Podaj poprawnę nazwisko"
 						),
 					email: Yup.string()
-						.required('E-mail jest wymagany')
+						.required("E-mail jest wymagany")
 						.matches(
 							/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-							'Podaj poprawny adres e-mail'
+							"Podaj poprawny adres e-mail"
 						),
 					phoneNumber: Yup.string()
-						.required('Numer telefonu jest wymagany')
-						.matches(/^\+?(\d{8,15})$/, 'Podaj poprawny numer telefonu'),
+						.required("Numer telefonu jest wymagany")
+						.matches(/^\+?(\d{8,15})$/, "Podaj poprawny numer telefonu"),
 					password: Yup.string()
-						.required('Hasło jest wymagane')
-						.min(6, 'Hasło musi zawierać min. 6 znaków')
+						.required("Hasło jest wymagane")
+						.min(6, "Hasło musi zawierać min. 6 znaków")
 						.matches(
 							/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/,
-							'Hasło musi zawierać (duża i mała litera, cyfra, znak specjalny)'
+							"Hasło musi zawierać (duża i mała litera, cyfra, znak specjalny)"
 						),
 					confirmPassword: Yup.string()
-						.required('Powtórzenie hasła jest wymagane')
-						.oneOf([Yup.ref('password'), null], 'Hasła muszą być takie same'),
+						.required("Powtórzenie hasła jest wymagane")
+						.oneOf([Yup.ref("password"), null], "Hasła muszą być takie same"),
 			  }),
 		onSubmit: values => {
 			setUserData(values)
-			console.log('Formik onSubmit called', values)
+			console.log("Formik onSubmit called", values)
 			if (!isLogin) {
 				axios
 					.get(`http://localhost:3001/register?email=${values.email}`)
 					.then(response => {
 						if (response.data.length > 0) {
-							setEmailError('E-mail jest już zajęty')
+							setEmailError("E-mail jest już zajęty")
 						} else {
 							// axios.post('http://localhost:3001/register', values)
 							axios
-								.post('http://localhost:3001/register', {
+								.post("http://localhost:3001/register", {
 									...values,
 									update: false,
 								})
@@ -129,15 +125,15 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 									// console.log("Po ustawieniu isModalOpen: ", isModalOpen);
 								})
 								.catch(error => {
-									alert('Błąd podczas rejestracji')
+									alert("Błąd podczas rejestracji")
 								})
 						}
 					})
 					.catch(error => {
-						alert('Błąd podczas sprawdzania adresu e-mail')
+						alert("Błąd podczas sprawdzania adresu e-mail")
 					})
 			} else {
-				console.log('Attempting login...')
+				console.log("Attempting login...")
 				handleLogin(values.email, values.password)
 			}
 		},
@@ -148,9 +144,9 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 
 	const handleClose = () => {
 		setIsModalOpen(true) // przeniesione na początek
-		setModalAnimation('slide-out')
-		setArrowButtonAnimation('fade-out')
-		setOverlayAnimation('fade-out')
+		setModalAnimation("slide-out")
+		setArrowButtonAnimation("fade-out")
+		setOverlayAnimation("fade-out")
 		// setTimeout(() => {
 		//     setIsOpen(false);
 		//     onClose();
@@ -158,9 +154,9 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 	}
 
 	const slideClose = () => {
-		setModalAnimation('slide-out')
-		setArrowButtonAnimation('fade-out')
-		setOverlayAnimation('fade-out')
+		setModalAnimation("slide-out")
+		setArrowButtonAnimation("fade-out")
+		setOverlayAnimation("fade-out")
 		setTimeout(() => {
 			setIsOpen(false)
 			onClose()
@@ -169,47 +165,36 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 
 	//ZWYKŁE LOGOWANIE
 	const handleLogin = (email, password) => {
-		console.log('Login with:', email, password)
+		console.log("Login with:", email, password)
 		axios
-			.get('http://localhost:3001/register')
+			.get("http://localhost:3001/register")
 			.then(response => {
-				console.log('Server response:', response.data)
+				console.log("Server response:", response.data)
 				const user = response.data.find(
 					user => user.email === email && user.password === password
 				)
 				if (user) {
 					setCurrentUser(user)
-					console.log('Successfully logged in:', user)
+					console.log("Successfully logged in:", user)
 					handleClose()
 					const loginTime = new Date().getTime()
-					localStorage.setItem('loginTime', loginTime)
-					localStorage.setItem('currentUser', JSON.stringify(user))
+					localStorage.setItem("loginTime", loginTime)
+					localStorage.setItem("currentUser", JSON.stringify(user))
 				} else {
-					setLoginError('E-mail lub hasło jest nieprawidłowe.')
+					setLoginError("E-mail lub hasło jest nieprawidłowe.")
 				}
 			})
 			.catch(error => {
-				console.error('Błąd podczas próby logowania:', error)
-				setLoginError('Błąd podczas logowania, spróbuj ponownie później.')
+				console.error("Błąd podczas próby logowania:", error)
+				setLoginError("Błąd podczas logowania, spróbuj ponownie później.")
 			})
 	}
-
-	// useEffect(() => {
-	//     let timer;
-	//     if (isModalOpen) {
-	//         timer = setTimeout(() => {
-	//             setIsModalOpen(false);
-	//         }, 5000);
-	//     }
-
-	//     return () => clearTimeout(timer);
-	// }, [isModalOpen]);
 
 	const switchToLogin = () => {
 		formik.setValues({
 			...formik.values,
-			email: '',
-			password: '',
+			email: "",
+			password: "",
 		})
 		setIsLogin(true)
 	}
@@ -217,132 +202,16 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 	const switchToRegistration = () => {
 		formik.setValues({
 			...formik.values,
-			email: '',
-			password: '',
-			confirmPassword: '',
+			email: "",
+			password: "",
+			confirmPassword: "",
 		})
 		setIsLogin(false)
 	}
 
 	const modalOverlayStyle = isOpen
-		? { display: 'none' }
-		: { visibility: 'visible', opacity: 1 }
-	// //FACEBOOK
-	//     useEffect(() => {
-	//         if (user) {
-	//             const { email, name } = user;
-
-	//             axios.get(`http://localhost:3001/register?email=${email}`)
-	//                 .then(response => {
-	//                     if (response.data.length > 0) {
-	//                         setCurrentUser(response.data[0]);
-	//                         const loginTime = new Date().getTime();
-	//                         localStorage.setItem('loginTime', loginTime);
-	//                     // localStorage.setItem('currentUser', JSON.stringify(user));  // zakładając, że pierwszy element to nasz użytkownik
-	//                         localStorage.setItem('currentUser', JSON.stringify(response.data[0]));
-	//                     } else {
-	//                         const newUser = {
-	//                             firstName: name.split(" ")[0],
-	//                             lastName: name.split(" ")[1],
-	//                             email: email,
-	//                         };
-	//                         axios.post('http://localhost:3001/register', newUser)
-	//                             .then(response => {
-	//                                 setCurrentUser(response.data);
-	//                                 localStorage.setItem('currentUser', JSON.stringify(response.data));
-	//                             })
-	//                             .catch(error => {
-	//                                 console.error('Błąd podczas rejestracji użytkownika z Facebooka:', error);
-	//                             });
-	//                     }
-	//                 })
-	//                 .catch(error => {
-	//                     console.error('Błąd podczas sprawdzania adresu e-mail:', error);
-	//                 });
-	//         }
-	//     }, [user]);
-
-	//     useEffect(() => {
-	//         const savedUser = localStorage.getItem('currentUser');
-	//         if (savedUser) {
-	//             setCurrentUser(JSON.parse(savedUser));
-	//         }
-	//     }, []);
-
-	// //GOOGLE
-	//     useEffect(() => {
-	//         if (googleUser) {
-	//             const { email, name } = googleUser;
-
-	//             axios.get(`http://localhost:3001/register?email=${email}`)
-	//                 .then(response => {
-	//                     if (response.data.length > 0) {
-	//                         setCurrentUser(response.data[0]);
-	//                         const loginTime = new Date().getTime();
-	//                         localStorage.setItem('loginTime', loginTime);
-	//                         localStorage.setItem('currentUser', JSON.stringify(response.data[0]));
-	//                     } else {
-	//                         const newUser = {
-	//                             firstName: name.split(" ")[0],
-	//                             lastName: name.split(" ")[1],
-	//                             email: email,
-	//                         };
-	//                         axios.post('http://localhost:3001/register', newUser)
-	//                             .then(response => {
-	//                                 setCurrentUser(response.data);
-	//                                 localStorage.setItem('currentUser', JSON.stringify(response.data));
-	//                             })
-	//                             .catch(error => {
-	//                                 console.error('Błąd podczas rejestracji użytkownika z Google:', error);
-	//                             });
-	//                     }
-	//                 })
-	//                 .catch(error => {
-	//                     console.error('Błąd podczas sprawdzania adresu e-mail:', error);
-	//                 });
-	//         }
-	//     }, [googleUser]);
-
-	// // MICROSOFT
-	// useEffect(() => {
-	//   console.log('Wartość microsoftUser:', microsoftUser);
-
-	//   if (microsoftUser) {
-	//     const { mail, displayName } = microsoftUser;
-
-	//     if (mail && displayName) {
-	//       axios.get(`http://localhost:3001/register?email=${mail}`)
-	//         .then(response => {
-	//           console.log('Microsoft:', response);
-	//           if (response.data.length > 0) {
-	//             setCurrentUser(response.data[0]);
-	//             const loginTime = new Date().getTime();
-	//             localStorage.setItem('loginTime', loginTime);
-	//             localStorage.setItem('currentUser', JSON.stringify(response.data[0]));
-	//           } else {
-	//             const newUser = {
-	//               firstName: displayName.split(" ")[0],
-	//               lastName: displayName.split(" ")[1] || '', // Może nie być nazwiska
-	//               email: mail,
-	//             };
-	//             axios.post('http://localhost:3001/register', newUser)
-	//               .then(response => {
-	//                 setCurrentUser(response.data);
-	//                 localStorage.setItem('currentUser', JSON.stringify(response.data));
-	//               })
-	//               .catch(error => {
-	//                 console.error('Błąd podczas rejestracji użytkownika z Microsofta:', error);
-	//               });
-	//           }
-	//         })
-	//         .catch(error => {
-	//           console.error('Błąd podczas sprawdzania adresu e-mail:', error);
-	//         });
-	//     } else {
-	//       console.error('Brak wymaganych danych użytkownika z Microsofta.');
-	//     }
-	//   }
-	// }, [microsoftUser]);
+		? { display: "none" }
+		: { visibility: "visible", opacity: 1 }
 
 	return (
 		<>
@@ -354,21 +223,19 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 					<AuthModalContainer
 						className={modalAnimation}
 						style={{
-							transform: isExpanded ? 'translateX(0)' : 'translateX(100%)',
+							transform: isExpanded ? "translateX(0)" : "translateX(100%)",
 						}}>
 						<AuthModalContent>
 							<TabContainer>
 								<SubmitButton active={isLogin} onClick={switchToLogin}>
-									Zaloguj
+									{t("login.login")}
 								</SubmitButton>
 								<SubmitButton active={!isLogin} onClick={switchToRegistration}>
-									Zarejestruj
+									{t("login.registration")}
 								</SubmitButton>
 							</TabContainer>
 							<WelcomeText>
-								{isLogin
-									? 'Witaj w CAR RENTAL'
-									: 'Dołącz do naszej społeczności CAR RENTAL'}
+								{isLogin ? t("welcomeMessage") : t("joinCommunity")}
 							</WelcomeText>
 							<FormContainer>
 								<form onSubmit={formik.handleSubmit}>
@@ -395,7 +262,7 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 												<ErrorMessage>{formik.errors.password}</ErrorMessage>
 											)}
 											{loginError && <ErrorMessage>{loginError}</ErrorMessage>}
-											<TabButton type='submit'>Zaloguj się</TabButton>
+											<TabButton type='submit'>{t("login.login")}</TabButton>
 										</>
 									) : (
 										<>
@@ -462,12 +329,14 @@ const AuthModal = ({ onClose, setCurrentUser }) => {
 													{formik.errors.confirmPassword}
 												</ErrorMessage>
 											)}
-											<TabButton type='submit'>Zarejestruj się</TabButton>
+											<TabButton type='submit'>
+												{t("login.registration")}
+											</TabButton>
 										</>
 									)}
 								</form>
 							</FormContainer>
-							<StyledIconText>Kontynuuj jednym kliknięciem!</StyledIconText>
+							<StyledIconText>{t("oneClick")}</StyledIconText>
 							<SocialIconsContainer>
 								<SocialIconContainer>
 									<SocialIcon icon={faFacebookF} />

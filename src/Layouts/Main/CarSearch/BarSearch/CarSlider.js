@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from "react"
 import {
 	StyledCarSlider,
 	TitleBox,
@@ -8,55 +8,47 @@ import {
 	StyledPointers,
 	Pointer,
 	TitleBoxWrapper,
-	SliderContainer,
-} from '../../../../Assets/Styles/CarSearch/CarSlider.styles'
-import { useTranslation } from 'react-i18next'
+} from "../../../../Assets/Styles/CarSearch/CarSlider.styles"
+import { useTranslation } from "react-i18next"
 
 function CarSlider() {
 	const { t } = useTranslation()
-	const image1 = require('../../../../Assets/Images/auto.png')
+	const image1 = require("../../../../Assets/Images/auto.png")
 	const imageArray = [image1, image1, image1]
 	const totalPointers = imageArray.length
 	const intervalRef = useRef(null)
 	const [active, setActive] = useState(0)
+	const [isReversing, setIsReversing] = useState(false)
 
 	const changeSlider = index => {
 		clearInterval(intervalRef.current)
 		setActive(index)
+		setIsReversing(false)
 	}
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setActive(prevActive => {
-				if (prevActive === totalPointers - 1) {
-					// Chcemy przeskoczyć do "pierwszego" slajdu bez animacji
-					requestAnimationFrame(() => {
-						// Ustawiamy slajd na pierwszy po minimalnym opóźnieniu, aby uniknąć widocznej animacji
-						setActive(0)
-					})
-					return prevActive
+				if (isReversing) {
+					return prevActive === 0 ? prevActive : prevActive - 1
 				} else {
-					return (prevActive + 1) % totalPointers
+					return prevActive === totalPointers - 1 ? prevActive : prevActive + 1
 				}
 			})
-		}, 4000) // Czas przejścia
+		}, 4000)
+
+		intervalRef.current = interval
 
 		return () => clearInterval(interval)
-	}, [totalPointers])
+	}, [totalPointers, isReversing])
 
 	useEffect(() => {
-		const resetInterval = () => {
-			clearInterval(intervalRef.current)
-			const interval = setInterval(() => {
-				setActive(prevActive => (prevActive + 1) % totalPointers)
-			}, 4000)
-			intervalRef.current = interval
+		if (active === totalPointers - 1 && !isReversing) {
+			setIsReversing(true)
+		} else if (active === 0 && isReversing) {
+			setIsReversing(false)
 		}
-
-		resetInterval()
-
-		return () => clearInterval(intervalRef.current)
-	}, [active])
+	}, [active, isReversing])
 
 	return (
 		<StyledCarSlider>
@@ -94,7 +86,7 @@ function CarSlider() {
 					<Pointer
 						key={index}
 						onClick={() => changeSlider(index)}
-						style={{ padding: index === active ? '8px' : '0' }}
+						style={{ padding: index === active ? "8px" : "0" }}
 					/>
 				))}
 			</StyledPointers>

@@ -1,7 +1,6 @@
-import React, { useState, useRef } from 'react'
-import { useTranslation } from 'react-i18next'
-import FleetTop, { FleetNumber } from '../Components/AutoPanel/FleetTop'
-import FaqBox from '../Components/FAQ/FaqBox'
+import React from "react"
+import FleetTop from "../Components/AutoPanel/FleetTop"
+import FaqBox from "../Components/FAQ/FaqBox"
 
 function Faq() {
 	return (

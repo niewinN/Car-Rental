@@ -1,17 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import CarSearch from './CarSearch'
-import SearchingParameters from './SearchingParameters'
-import CarSlider from './CarSlider'
+import React from "react"
+import styled from "styled-components"
+import CarSearch from "./CarSearch"
+import SearchingParameters from "./SearchingParameters"
 
 function Main() {
 	return (
 		<div>
 			<CarSearch />
 			<SearchingParameters />
-			<StyledComponent>
-				<CarSlider />
-			</StyledComponent>
+			<StyledComponent></StyledComponent>
 		</div>
 	)
 }

@@ -1,11 +1,13 @@
-import React from 'react'
-import Plates from './Plates'
-import styled from 'styled-components'
-import theme from '../../Assets/Styles/theme'
+import React from "react"
+import Plates from "./Plates"
+import styled from "styled-components"
+import theme from "../../Assets/Styles/theme"
+import { useTranslation } from "react-i18next"
 
 const FleetTop = () => {
+	const { t } = useTranslation()
 	return (
-		<FleetNumber>Rezerwacje: +48 958 232 292</FleetNumber>
+		<FleetNumber>{t("reservationsPhone")}</FleetNumber>
 		// <Plates/>
 	)
 }
