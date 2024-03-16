@@ -10,9 +10,9 @@ import { faAnglesDown } from "@fortawesome/free-solid-svg-icons"
 import { useFormik } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
-import { ErrorMessage } from "../../Assets/Styles/SummaryPanel/ReservationForm.styles"
-import SuccessModal from "../../Layouts/UI/SuccessModal"
-import { useUserData } from "../../Contexts/UserDataContext"
+import { ErrorMessage } from "../../assets/Styles/SummaryPanel/ReservationForm.styles"
+import SuccessModal from "../../layouts/UI/SuccessModal"
+import { useUserData } from "../../contexts/UserDataContext"
 
 import {
 	ModalOverlay,
@@ -30,7 +30,7 @@ import {
 	SocialIcon,
 	SocialIconContainer,
 	SocialIconsContainer,
-} from "../../Assets/Styles/LoginAndRegistration/AuthModal.styles"
+} from "../../assets/Styles/LoginAndRegistration/AuthModal.styles"
 import { useTranslation } from "react-i18next"
 
 const AuthModal = ({ onClose, setCurrentUser }) => {

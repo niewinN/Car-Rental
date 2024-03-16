@@ -1,17 +1,17 @@
-import React from 'react'
-import CarsReservationPanel from '../Components/CarsReservationPanel/CarsReservationPanel'
-import HeaderBottom from '../Layouts/UI/HeaderBottom'
-import TrolleyIcon from '../Layouts/UI/TrolleyIcon'
+import React from "react"
+import CarsReservationPanel from "../components/CarsReservationPanel/CarsReservationPanel"
+import HeaderBottom from "../layouts/UI/HeaderBottom"
+import TrolleyIcon from "../layouts/UI/TrolleyIcon"
 
 function Reservation() {
-  return (
-    <>
-    <HeaderBottom>
-      <TrolleyIcon/>
-    </HeaderBottom>
-    <CarsReservationPanel/>
-    </>
-  )
+	return (
+		<>
+			<HeaderBottom>
+				<TrolleyIcon />
+			</HeaderBottom>
+			<CarsReservationPanel />
+		</>
+	)
 }
 
 export default Reservation

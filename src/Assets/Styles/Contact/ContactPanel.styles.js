@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import HeaderBottom from '../../../Layouts/UI/HeaderBottom'
+import styled from "styled-components"
+import HeaderBottom from "../../../layouts/UI/HeaderBottom"
 
 export const ContactPanelDesktop = styled.div`
 	@media (min-width: 768px) {

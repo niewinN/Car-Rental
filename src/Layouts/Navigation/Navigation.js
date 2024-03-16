@@ -15,11 +15,11 @@ import {
 	NavList,
 	NavLoginText,
 	NavFontAwesomeIcon,
-} from "../../Assets/Styles/Navigation/Navigation.styles"
+} from "../../assets/Styles/Navigation/Navigation.styles"
 import { useTranslation } from "react-i18next"
-import AuthModal from "../../Components/LoginAndRegistration/AuthModal"
-import EditDataModal from "../../Components/LoginAndRegistration/EditDataModal"
-import { useUserData } from "../../Contexts/UserDataContext"
+import AuthModal from "../../components/LoginAndRegistration/AuthModal"
+import EditDataModal from "../../components/LoginAndRegistration/EditDataModal"
+import { useUserData } from "../../contexts/UserDataContext"
 
 const Navigation = () => {
 	const [showNav, setShowNav] = useState(false)

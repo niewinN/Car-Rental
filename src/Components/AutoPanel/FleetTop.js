@@ -1,7 +1,7 @@
 import React from "react"
 import Plates from "./Plates"
 import styled from "styled-components"
-import theme from "../../Assets/Styles/theme"
+import theme from "../../assets/Styles/theme"
 import { useTranslation } from "react-i18next"
 
 const FleetTop = () => {
@@ -20,6 +20,8 @@ export const FleetNumber = styled.div`
 	text-align: center;
 	color: #fff;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 17px;
 	font-weight: bold;
+	max-width: 1260px;
+	margin: 0 auto;
 `

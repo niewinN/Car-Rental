@@ -1,6 +1,6 @@
 import React from "react"
-import FleetTop from "../Components/AutoPanel/FleetTop"
-import FaqBox from "../Components/FAQ/FaqBox"
+import FleetTop from "../components/AutoPanel/FleetTop"
+import FaqBox from "../components/FAQ/FaqBox"
 
 function Faq() {
 	return (

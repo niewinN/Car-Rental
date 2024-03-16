@@ -1,11 +1,11 @@
-import styled from 'styled-components'
-import { useTranslation } from 'react-i18next'
-import theme from '../../../Assets/Styles/theme'
+import styled from "styled-components"
+import { useTranslation } from "react-i18next"
+import theme from "../../../assets/Styles/theme"
 
 function NumberSearch() {
 	const { t } = useTranslation()
 
-	return <StyledComponent>{t('reservation')}</StyledComponent>
+	return <StyledComponent>{t("reservation")}</StyledComponent>
 }
 
 export default NumberSearch

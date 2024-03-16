@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import triangle from '../../Assets/Images/triangle.png'
-import NumberSearch from './CarSearch/NumberSearch'
-import BarSearch from './CarSearch/BarSearch'
-import theme from '../../Assets/Styles/theme'
+import React from "react"
+import styled from "styled-components"
+import triangle from "../../assets/Images/triangle.png"
+import NumberSearch from "./CarSearch/NumberSearch"
+import BarSearch from "./CarSearch/BarSearch"
+import theme from "../../assets/Styles/theme"
 
 const CarSearch = () => {
 	return (

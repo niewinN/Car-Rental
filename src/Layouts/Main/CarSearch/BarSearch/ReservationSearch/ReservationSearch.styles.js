@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Datetime from "react-datetime"
 import { Link } from "react-router-dom"
-import theme from "../../../../../Assets/Styles/theme"
+import theme from "../../../../../assets/Styles/theme"
 
 const StyledLink = styled(Link)`
 	text-decoration: none;

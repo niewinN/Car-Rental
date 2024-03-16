@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import {
 	ContactMapWrapper,
 	ContactMapBox,
 	ContactMapAddress as OriginalContactMapAddress,
-} from '../../Assets/Styles/Contact/ContactMap.styles'
-import staticMap from '../../Assets/Images/map.jpg'
-import styled from 'styled-components'
+} from "../../assets/Styles/Contact/ContactMap.styles"
+import staticMap from "../../assets/Images/map.jpg"
+import styled from "styled-components"
 
 const ContactMapAddress = styled(OriginalContactMapAddress)`
 	position: relative;
@@ -17,12 +17,12 @@ function ContactMap() {
 	const [iframeIsLoaded, setIframeIsLoaded] = useState(false)
 
 	const sharedStyles = {
-		position: 'absolute',
-		top: '50%',
-		left: '50%',
-		width: '92%',
-		height: '92%',
-		transform: 'translate(-50%, -50%)',
+		position: "absolute",
+		top: "50%",
+		left: "50%",
+		width: "92%",
+		height: "92%",
+		transform: "translate(-50%, -50%)",
 	}
 
 	return (

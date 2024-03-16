@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import PhoneNumber from '../../../Components/PhoneNumber'
-import theme from '../theme'
+import styled from "styled-components"
+import PhoneNumber from "../../../components/PhoneNumber"
+import theme from "../theme"
 
 export const ContactInformationWrapper = styled.div`
 	padding: 20px;

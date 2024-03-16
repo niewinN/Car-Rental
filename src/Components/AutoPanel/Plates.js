@@ -1,27 +1,27 @@
-import Plate from '../Plate'
-import styled from 'styled-components'
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import Plate from "../Plate"
+import styled from "styled-components"
+import React from "react"
+import { useTranslation } from "react-i18next"
 
 function Plates({ carTypeFilter = [], onSelect }) {
 	const { t } = useTranslation()
 
 	const carTypes = [
 		{
-			image: require('../../Assets/Images/CarsTypes/car2.png'),
-			description: t('carTypes.sedan'),
+			image: require("../../assets/Images/CarsTypes/car2.png"),
+			description: t("carTypes.sedan"),
 		},
 		{
-			image: require('../../Assets/Images/CarsTypes/van2.png'),
-			description: t('carTypes.van'),
+			image: require("../../assets/Images/CarsTypes/van2.png"),
+			description: t("carTypes.van"),
 		},
 		{
-			image: require('../../Assets/Images/CarsTypes/delivery2.png'),
-			description: t('carTypes.delivery'),
+			image: require("../../assets/Images/CarsTypes/delivery2.png"),
+			description: t("carTypes.delivery"),
 		},
 		{
-			image: require('../../Assets/Images/CarsTypes/taxi2.png'),
-			description: t('carTypes.taxi'),
+			image: require("../../assets/Images/CarsTypes/taxi2.png"),
+			description: t("carTypes.taxi"),
 		},
 	]
 	return (

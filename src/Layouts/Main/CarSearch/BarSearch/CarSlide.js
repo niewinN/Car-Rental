@@ -1,4 +1,4 @@
-// import photo from "../../../../Assets/Images/auto.png"
+// import photo from "../../../../assets/Images/auto.png"
 
 export function CarSlide({ text, photo }) {
 	return (

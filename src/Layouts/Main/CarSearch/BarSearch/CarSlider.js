@@ -8,12 +8,12 @@ import {
 	StyledPointers,
 	Pointer,
 	TitleBoxWrapper,
-} from "../../../../Assets/Styles/CarSearch/CarSlider.styles"
+} from "../../../../assets/Styles/CarSearch/CarSlider.styles"
 import { useTranslation } from "react-i18next"
 
 function CarSlider() {
 	const { t } = useTranslation()
-	const image1 = require("../../../../Assets/Images/auto.png")
+	const image1 = require("../../../../assets/Images/auto.png")
 	const imageArray = [image1, image1, image1]
 	const totalPointers = imageArray.length
 	const intervalRef = useRef(null)

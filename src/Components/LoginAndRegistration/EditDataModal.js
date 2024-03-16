@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as Yup from "yup"
 import axios from "axios"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
-import { ErrorMessage } from "../../Assets/Styles/SummaryPanel/ReservationForm.styles"
+import { ErrorMessage } from "../../assets/Styles/SummaryPanel/ReservationForm.styles"
 import {
 	EditDataModalContainer,
 	EditDataHeader,
@@ -16,12 +16,12 @@ import {
 	InputEdit,
 	StyledPencilIcon,
 	EditDataModalWrapper,
-} from "../../Assets/Styles/LoginAndRegistration/EditDataModal.styles"
+} from "../../assets/Styles/LoginAndRegistration/EditDataModal.styles"
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons"
 import {
 	ModalOverlay,
 	ArrowButton,
-} from "../../Assets/Styles/LoginAndRegistration/AuthModal.styles"
+} from "../../assets/Styles/LoginAndRegistration/AuthModal.styles"
 
 const EditDataModal = ({ onClose, currentUser, setCurrentUser, onLogout }) => {
 	const [isOpen, setIsOpen] = useState(false)

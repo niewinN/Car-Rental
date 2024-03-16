@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
 	PhoneNumberContact,
 	ContactInformationWrapper,
@@ -7,9 +7,9 @@ import {
 	ContactInformationBox,
 	ContactInformationItem,
 	ContactInformationText,
-} from '../../Assets/Styles/Contact/ContactInformation.styles'
-import contactArrow from '../../Assets/Images/contact_arrow.png'
-import { useTranslation } from 'react-i18next'
+} from "../../assets/Styles/Contact/ContactInformation.styles"
+import contactArrow from "../../assets/Images/contact_arrow.png"
+import { useTranslation } from "react-i18next"
 
 function ContactInformation() {
 	const { t } = useTranslation()
@@ -20,30 +20,30 @@ function ContactInformation() {
 			<ContactInformationBox>
 				<ContactInformationItem>
 					<ContactInformationItemText>
-						{t('website')}
+						{t("website")}
 					</ContactInformationItemText>
 					<ContactInformationItemText>
-						{t('address.city')}
+						{t("address.city")}
 					</ContactInformationItemText>
 					<ContactInformationItemText>
-						{t('address.street')}
+						{t("address.street")}
 					</ContactInformationItemText>
 				</ContactInformationItem>
 				<ContactInformationItem>
 					<ContactInformationItemText>
-						{t('taxInfo.nip')}
+						{t("taxInfo.nip")}
 					</ContactInformationItemText>
 					<ContactInformationItemText>
-						{t('taxInfo.regon')}
+						{t("taxInfo.regon")}
 					</ContactInformationItemText>
 					<ContactInformationItemText>
-						{t('taxInfo.bankAccount')}
+						{t("taxInfo.bankAccount")}
 						<br />
-						{t('taxInfo.bankAccountNr')}
+						{t("taxInfo.bankAccountNr")}
 					</ContactInformationItemText>
 				</ContactInformationItem>
 				<ContactInformationText>
-					<ContactInformationItemText>{t('findUs')}</ContactInformationItemText>
+					<ContactInformationItemText>{t("findUs")}</ContactInformationItemText>
 					<ContactArrow src={contactArrow} alt='' />
 				</ContactInformationText>
 			</ContactInformationBox>

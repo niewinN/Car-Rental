@@ -1,18 +1,18 @@
 import React, { useContext, useState } from "react"
-import autoImg from "../../Assets/Images/auto.png"
-import gearboxIcon from "../../Assets/Images/ServiceImages/gearbox.png"
-import personIcon from "../../Assets/Images/ServiceImages/person2.png"
-import fuelIcon from "../../Assets/Images/ServiceImages/fuel2.png"
-import bootIcon from "../../Assets/Images/ServiceImages/boot2.png"
-import doorIcon from "../../Assets/Images/ServiceImages/door2.png"
+import autoImg from "../../assets/Images/auto.png"
+import gearboxIcon from "../../assets/Images/ServiceImages/gearbox.png"
+import personIcon from "../../assets/Images/ServiceImages/person2.png"
+import fuelIcon from "../../assets/Images/ServiceImages/fuel2.png"
+import bootIcon from "../../assets/Images/ServiceImages/boot2.png"
+import doorIcon from "../../assets/Images/ServiceImages/door2.png"
 import {
 	CardWrapper,
 	CardContainer,
 	ErrorMessageType,
-} from "../../Assets/Styles/CarsReservationPanel/CarReservationCard.styles"
-import { ReservedCarsContext } from "../../Contexts/ReservedCarsContext"
+} from "../../assets/Styles/CarsReservationPanel/CarReservationCard.styles"
+import { ReservedCarsContext } from "../../contexts/ReservedCarsContext"
 import { useTranslation } from "react-i18next"
-import SuccessModal from "../../Layouts/UI/SuccessModal"
+import SuccessModal from "../../layouts/UI/SuccessModal"
 import { useHandleReserve } from "./hooks/ReserveCar"
 import { useCarFilter } from "./hooks/FilterCar"
 import ReservationInfo from "./views/ReservationInfo"

@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useContext } from "react"
-import AutoCard from "../Components/AutoPanel/AutoCard"
-import Plates from "../Components/AutoPanel/Plates"
+import AutoCard from "../components/AutoPanel/AutoCard"
+import Plates from "../components/AutoPanel/Plates"
 import styled from "styled-components"
-import { FilterContext } from "../Contexts/FilterContext"
-import { ErrorMessageType } from "../Assets/Styles/CarsReservationPanel/CarReservationCard.styles"
+import { FilterContext } from "../contexts/FilterContext"
+import { ErrorMessageType } from "../assets/Styles/CarsReservationPanel/CarReservationCard.styles"
 import { useTranslation } from "react-i18next"
-import FleetTop from "../Components/AutoPanel/FleetTop"
+import FleetTop from "../components/AutoPanel/FleetTop"
 
 function Fleet() {
 	const { t } = useTranslation()
 	const [carTypeFilter, setCarTypeFilter] = useState([])
 	const [showNoCarMessage, setShowNoCarMessage] = useState(false)
 
-	const image = require("../Assets/Images/auto.png")
-	const carimage2 = require("../Assets/Images/Ford_Focus2.png")
+	const image = require("../assets/Images/auto.png")
+	const carimage2 = require("../assets/Images/Ford_Focus2.png")
 
 	const cars = [
 		{ id: 1, image: image, name: "Toyota Corolla", type: "Osobowe" },

@@ -1,5 +1,5 @@
 import React from "react"
-import { PhoneNumberWrapper, Text } from "../Assets/Styles/PhoneNumber.styles"
+import { PhoneNumberWrapper, Text } from "../assets/Styles/PhoneNumber.styles"
 import { useTranslation } from "react-i18next"
 
 function PhoneNumber(props) {

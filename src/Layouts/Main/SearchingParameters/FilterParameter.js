@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react"
 import { StyledFilterParameter } from "./Parameters.style"
 import { useTranslation } from "react-i18next"
-import { useFilterContext } from "../../../Contexts/FilterContext"
+import { useFilterContext } from "../../../contexts/FilterContext"
 import {
 	Options,
 	Category,

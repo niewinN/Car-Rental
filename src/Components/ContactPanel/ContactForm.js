@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import {
 	ContactFormBox,
 	ContactFormBtn,
@@ -8,66 +8,66 @@ import {
 	ContactFormTextarea,
 	ContactFormTitle,
 	ContactFormWrapper,
-} from '../../Assets/Styles/Contact/ContactForm.styles'
-import SuccessModal from '../../Layouts/UI/SuccessModal'
-import { useFormik } from 'formik'
-import * as Yup from 'yup'
-import { useTranslation } from 'react-i18next'
-import theme from '../../Assets/Styles/theme'
+} from "../../assets/Styles/Contact/ContactForm.styles"
+import SuccessModal from "../../layouts/UI/SuccessModal"
+import { useFormik } from "formik"
+import * as Yup from "yup"
+import { useTranslation } from "react-i18next"
+import theme from "../../assets/Styles/theme"
 
 function ContactForm() {
 	const { t } = useTranslation()
 
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	// const [modalContent, setModalContent] = useState('');
-	const [modalContent, setModalContent] = useState({ type: '', message: '' })
+	const [modalContent, setModalContent] = useState({ type: "", message: "" })
 
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const [buttonPressed, setButtonPressed] = useState(false)
 
 	const validationSchema = Yup.object().shape({
 		name: Yup.string()
-			.required(t('validation.requiredName'))
-			.min(2, t('validation.shortName'))
-			.max(100, t('validation.longName'))
+			.required(t("validation.requiredName"))
+			.min(2, t("validation.shortName"))
+			.max(100, t("validation.longName"))
 			.matches(
 				/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\s\-']+$/,
-				t('validation.invalidName')
+				t("validation.invalidName")
 			),
 		phoneNumber: Yup.string()
-			.required(t('validation.requiredPhone'))
-			.matches(/^\+?(\d{8,15})$/, t('validation.invalidPhone')),
+			.required(t("validation.requiredPhone"))
+			.matches(/^\+?(\d{8,15})$/, t("validation.invalidPhone")),
 		email: Yup.string()
-			.required(t('validation.requiredEmail'))
-			.min(5, t('validation.shortEmail'))
-			.max(320, t('validation.longEmail'))
+			.required(t("validation.requiredEmail"))
+			.min(5, t("validation.shortEmail"))
+			.max(320, t("validation.longEmail"))
 			.matches(
 				/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-				t('validation.invalidEmail')
+				t("validation.invalidEmail")
 			),
 		subject: Yup.string()
-			.required(t('validation.requiredSubject'))
-			.min(3, t('validation.shortSubject'))
-			.max(150, t('validation.longSubject')),
+			.required(t("validation.requiredSubject"))
+			.min(3, t("validation.shortSubject"))
+			.max(150, t("validation.longSubject")),
 		message: Yup.string()
-			.required(t('validation.requiredMessage'))
-			.min(5, t('validation.shortMessage'))
-			.max(2000, t('validation.longMessage')),
+			.required(t("validation.requiredMessage"))
+			.min(5, t("validation.shortMessage"))
+			.max(2000, t("validation.longMessage")),
 	})
 
 	const formik = useFormik({
 		initialValues: {
-			name: '',
-			phoneNumber: '',
-			email: '',
-			subject: '',
-			message: '',
+			name: "",
+			phoneNumber: "",
+			email: "",
+			subject: "",
+			message: "",
 		},
 		validationSchema,
 		onSubmit: values => {
 			setIsModalOpen(true)
 			// setModalContent(t('toastFormSuccess'));
-			setModalContent({ type: 'success', message: t('toastFormSuccess') })
+			setModalContent({ type: "success", message: t("toastFormSuccess") })
 			setIsSubmitting(false)
 		},
 	})
@@ -81,14 +81,14 @@ function ContactForm() {
 		setButtonPressed(true)
 
 		const errors = await formik.validateForm()
-		let errorMessage = ''
+		let errorMessage = ""
 		if (Object.keys(errors).length > 0) {
 			// errorMessage = 'Wypełnij poprawnie formularz:\n';
 			for (let key in errors) {
-				errorMessage += '- ' + errors[key] + '\n'
+				errorMessage += "- " + errors[key] + "\n"
 			}
 			setIsModalOpen(true)
-			setModalContent({ type: 'error', message: errorMessage })
+			setModalContent({ type: "error", message: errorMessage })
 			setIsSubmitting(false)
 		} else {
 			formik.handleSubmit()
@@ -100,9 +100,9 @@ function ContactForm() {
 	return (
 		<ContactFormWrapper>
 			<ContactFormPanel onSubmit={handleFormSubmit} noValidate>
-				<ContactFormTitle>{t('formTitle')}</ContactFormTitle>
+				<ContactFormTitle>{t("formTitle")}</ContactFormTitle>
 				<ContactFormBox>
-					<ContactFormLabel htmlFor='name'>{t('labels.name')}</ContactFormLabel>
+					<ContactFormLabel htmlFor='name'>{t("labels.name")}</ContactFormLabel>
 					<ContactFormInput
 						type='text'
 						id='name'
@@ -114,7 +114,7 @@ function ContactForm() {
 				</ContactFormBox>
 				<ContactFormBox>
 					<ContactFormLabel htmlFor='phoneNumber'>
-						{t('labels.phoneNumber')}
+						{t("labels.phoneNumber")}
 					</ContactFormLabel>
 					<ContactFormInput
 						type='tel'
@@ -127,7 +127,7 @@ function ContactForm() {
 				</ContactFormBox>
 				<ContactFormBox>
 					<ContactFormLabel htmlFor='email'>
-						{t('labels.email')}
+						{t("labels.email")}
 					</ContactFormLabel>
 					<ContactFormInput
 						type='email'
@@ -140,7 +140,7 @@ function ContactForm() {
 				</ContactFormBox>
 				<ContactFormBox>
 					<ContactFormLabel htmlFor='subject'>
-						{t('labels.subject')}
+						{t("labels.subject")}
 					</ContactFormLabel>
 					<ContactFormInput
 						type='text'
@@ -153,7 +153,7 @@ function ContactForm() {
 				</ContactFormBox>
 				<ContactFormBox>
 					<ContactFormLabel htmlFor='message'>
-						{t('labels.message')}
+						{t("labels.message")}
 					</ContactFormLabel>
 					<ContactFormTextarea
 						id='message'
@@ -165,7 +165,7 @@ function ContactForm() {
 				</ContactFormBox>
 				<ContactFormBox>
 					<ContactFormBtn type='submit' disabled={isSubmitting}>
-						{t('labels.submitButton')}
+						{t("labels.submitButton")}
 					</ContactFormBtn>
 				</ContactFormBox>
 			</ContactFormPanel>
@@ -174,18 +174,18 @@ function ContactForm() {
 				isOpen={isModalOpen}
 				onRequestClose={() => setIsModalOpen(false)}
 				height='300px'
-				icon={modalContent.type === 'error' ? 'x' : 'check'}>
-				{modalContent.type === 'error' && <p>Wypełnij poprawnie formularz:</p>}
+				icon={modalContent.type === "error" ? "x" : "check"}>
+				{modalContent.type === "error" && <p>Wypełnij poprawnie formularz:</p>}
 				{modalContent.message
-					.split('\n')
+					.split("\n")
 					.filter(msg => msg)
 					.map((line, index) => (
 						<p
 							key={index}
 							style={
-								modalContent.type === 'error' &&
-								line !== 'Wypełnij poprawnie formularz:'
-									? { color: `${theme.colors.primary}`, fontSize: '1.2rem' }
+								modalContent.type === "error" &&
+								line !== "Wypełnij poprawnie formularz:"
+									? { color: `${theme.colors.primary}`, fontSize: "1.2rem" }
 									: {}
 							}>
 							{line}

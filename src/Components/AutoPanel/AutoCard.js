@@ -7,44 +7,44 @@ import {
 	AutoNameDiv,
 	ImageWrapper,
 	ServicesDiv,
-} from "../../Assets/Styles/AutoPanel/AutoCard.styles"
+} from "../../assets/Styles/AutoPanel/AutoCard.styles"
 import { useTranslation } from "react-i18next"
 
 function AutoCard(props) {
 	const { t } = useTranslation()
-	// const image = require('../../Assets/Images/auto.png');
-	// const carimage2=require('../../Assets/Images/Ford_Focus2.png');
+	// const image = require('../../assets/Images/auto.png');
+	// const carimage2=require('../../assets/Images/Ford_Focus2.png');
 	const servicesList = [
 		{
-			image: require("../../Assets/Images/ServiceImages/person2.png"),
+			image: require("../../assets/Images/ServiceImages/person2.png"),
 			description: t("carFeatures.5 osobowy"),
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/fuel2.png"),
+			image: require("../../assets/Images/ServiceImages/fuel2.png"),
 			description: t("carFeatures.Diesel"),
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/gearbox.png"),
+			image: require("../../assets/Images/ServiceImages/gearbox.png"),
 			description: t("carFeatures.Manualna"),
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/boot2.png"),
+			image: require("../../assets/Images/ServiceImages/boot2.png"),
 			description: t("carFeatures.Bagażnik - 280L"),
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/door2.png"),
+			image: require("../../assets/Images/ServiceImages/door2.png"),
 			description: t("carFeatures.5 drzwiowy"),
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/isofix2.png"),
+			image: require("../../assets/Images/ServiceImages/isofix2.png"),
 			description: "Isofix",
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/gps2.png"),
+			image: require("../../assets/Images/ServiceImages/gps2.png"),
 			description: "GPS",
 		},
 		{
-			image: require("../../Assets/Images/ServiceImages/hook2.png"),
+			image: require("../../assets/Images/ServiceImages/hook2.png"),
 			description: t("carFeatures.Hook"),
 		},
 	]

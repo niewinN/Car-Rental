@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import theme from "../../Assets/Styles/theme"
+import theme from "../../assets/Styles/theme"
 
 const FaqQuestion = ({ question, answer }) => {
 	const [isOpen, setIsOpen] = useState(false)

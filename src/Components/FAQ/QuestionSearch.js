@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import theme from '../../Assets/Styles/theme'
+import React, { useState } from "react"
+import styled from "styled-components"
+import theme from "../../assets/Styles/theme"
 
 const QuestionSearch = ({ questions, setFilteredQuestions }) => {
-	const [searchQuery, setSearchQuery] = useState('')
+	const [searchQuery, setSearchQuery] = useState("")
 
 	const handleSearch = e => {
 		const query = e.target.value.toLowerCase()
